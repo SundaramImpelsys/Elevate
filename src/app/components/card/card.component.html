@@ -1,0 +1,8 @@
+<div class="card my-2">
+    <img [src]="imageSrc" class="card-img-top" alt="Card">
+    <div class="card-body">
+      <h5 *ngIf="title"  class="card-title">{{ title }}</h5>
+      <p *ngIf="description" class="card-text">{{ description }}</p>
+    </div>
+  </div>
+  

@@ -1,0 +1,34 @@
+.about-container{
+  margin: 50px;
+}
+Strong{
+    font-size: 1.5rem;
+    color: #ff7518;
+}
+
+p{
+    color: #194866;
+}
+
+.about {
+    margin-top: 2rem auto;
+  }
+  
+  .left p {
+    text-align: justify;
+  }
+  
+  .right img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  @media (max-width: 768px) {
+    .left, .right {
+      text-align: center;
+    }
+  }
+  

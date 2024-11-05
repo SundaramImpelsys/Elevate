@@ -1,0 +1,33 @@
+.help-container {
+    background-color: #194866;
+    box-shadow: 0 4px 10px rgba(25, 72, 102, 0.9);
+    margin: 30px;
+    padding: 20px 40px;
+    border-radius: 5px;
+    color: white;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .btn-help {
+    background-color: #ff7518;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 992px) {
+    .help-container .col-lg-8 {
+      text-align: center;
+    }
+  }
+  

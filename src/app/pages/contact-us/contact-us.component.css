@@ -1,0 +1,34 @@
+  .contact-container {
+    margin: 20px;
+  }
+  
+  .map-container {
+    background-color: rgba(25, 72, 102, 0.9);
+    box-shadow: 0 4px 10px rgba(25, 72, 102, 0.9);
+    padding: 10px;
+  }
+  
+  mat-card {
+    padding: 16px;
+    border: none;
+  }
+  
+  .center-header {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  mat-card-title{
+    font-size: 2.5rem;
+    color: #ff7518;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  
+  mat-list-item h5 {
+    color: #194866;
+  }
+
+  

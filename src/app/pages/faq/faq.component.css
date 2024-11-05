@@ -1,0 +1,20 @@
+.container{
+    margin: 2rem auto;
+    color: #194866;
+}
+
+.mat-expansion-panel-header 
+{ 
+    transition: background-color 0.3s, color 0.3s; 
+} 
+.expanded-header 
+{ 
+    background-color: #FF7518 !important; /* Angular Material Orange */ 
+    mat-panel-title{
+        color: white !important; 
+    }
+}
+
+p{
+    margin-top: 15px !important;
+}

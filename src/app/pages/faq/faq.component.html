@@ -1,0 +1,52 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <h1 class="text-center mb-4">Frequently Asked Questions</h1>
+  
+    <mat-accordion>
+      <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+        <mat-expansion-panel-header [ngClass]="{'expanded-header': panelOpenState}">
+          <mat-panel-title>
+            What is Elevate?
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>Elevate is a learning management system (LMS) designed to help organizations deliver engaging and effective online education. It supports curriculum development, certifications, social learning, and more.</p>
+      </mat-expansion-panel>
+  
+      <mat-expansion-panel (opened)="panelOpenState2 = true" (closed)="panelOpenState2 = false">
+        <mat-expansion-panel-header [ngClass]="{'expanded-header': panelOpenState2}">
+          <mat-panel-title>
+            How do I join a course on Elevate?
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>You can join a course by logging into your Elevate account and navigating to the course you wish to enroll in. Ensure you have a stable internet connection and the necessary software installed.</p>
+      </mat-expansion-panel>
+  
+      <mat-expansion-panel (opened)="panelOpenState3 = true" (closed)="panelOpenState3 = false">
+        <mat-expansion-panel-header [ngClass]="{'expanded-header': panelOpenState3}">
+          <mat-panel-title>
+            What if I miss a live session?
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>If you miss a live session, recordings may be available in your course materials. Check with your instructor for more details on accessing the recordings.</p>
+      </mat-expansion-panel>
+  
+      <mat-expansion-panel (opened)="panelOpenState4 = true" (closed)="panelOpenState4 = false">
+        <mat-expansion-panel-header [ngClass]="{'expanded-header': panelOpenState4}">
+          <mat-panel-title>
+            Can I ask questions during the session?
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>Yes! You can ask questions during the session using the chat feature or by unmuting yourself if permitted by the instructor.</p>
+      </mat-expansion-panel>
+  
+      <mat-expansion-panel (opened)="panelOpenState5 = true" (closed)="panelOpenState5 = false">
+        <mat-expansion-panel-header [ngClass]="{'expanded-header': panelOpenState5}">
+          <mat-panel-title>
+            What technical requirements do I need?
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>You will need a computer or tablet with a reliable internet connection, a webcam, and a microphone. Ensure your software is up to date.</p>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+  

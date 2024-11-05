@@ -1,0 +1,25 @@
+.community-announcement {
+    background: transparent;
+    margin: 20px;
+    padding: 15px;
+  }
+
+  h2{
+    color: #194866;
+  }
+  
+  .btn-announcement {
+    color: #ff7518;
+    border: solid 1px #ff7518;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+
+  .btn-announcement:hover{
+    background-color: #ff7518;
+    border: none;
+    color: white;
+  }
+  
+  

@@ -1,0 +1,16 @@
+<mat-nav-list>
+  <a mat-list-item [routerLink]="['/FAQ']" (click)="openLink($event)">
+    <span matListItemTitle>FAQ</span>
+    <span matLine>Frequently asked questions</span>
+  </a>
+
+  <a mat-list-item [routerLink]="['/contact-us']" (click)="openLink($event)">
+    <span matListItemTitle>Immediate Support</span>
+    <span matLine>In case of emergency, you can contact us in person or by phone</span>
+  </a>
+
+  <a mat-list-item [routerLink]="['/request-to-connect']" (click)="openLink($event)">
+    <span matListItemTitle>Request to Connect</span>
+    <span matLine>For queries, post your information, and we will connect with you</span>
+  </a>    
+</mat-nav-list>

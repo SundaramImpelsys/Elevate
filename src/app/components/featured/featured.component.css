@@ -1,0 +1,14 @@
+.featured-container {
+    background-color: #194866;
+    color: white;
+    padding: 40px 30px;
+  }
+
+  .row{
+    color: #194866;
+  }
+
+  ::ng-deep .mat-tooltip {
+    background-color: #194866;
+  }
+  

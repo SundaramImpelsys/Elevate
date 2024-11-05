@@ -1,0 +1,42 @@
+
+
+.intro-content{
+    background-color: #194866;
+    color: white;
+    padding: 50px 30px;
+    margin: 0;
+    width: 100%;
+    display: flex;
+  align-items: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+  }
+  
+  p {
+    font-size: 1.1rem;
+  }
+  
+  .card {
+    background-color: #f8f9fa;
+    border: none;
+    margin-bottom: 15px;
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    color: #194866;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .img-fluid {
+    width: 100%;
+    height: auto;
+  }
+  
+  

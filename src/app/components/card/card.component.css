@@ -1,0 +1,14 @@
+.card {
+    padding: 10px;
+    transition: transform 0.3s ease;
+  }
+
+
+  .card:hover{
+    transform: scale(1.04);
+  }
+  
+  .card-img-top {
+    object-fit: cover;
+  }
+  

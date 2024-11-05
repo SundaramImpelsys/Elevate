@@ -1,0 +1,36 @@
+.trusted-companies {
+  background: transparent;
+  padding: 2rem;
+}
+
+.scrolling-wrapper {
+  display: flex;
+  overflow: hidden; 
+  white-space: nowrap; 
+}
+
+.scrolling-content {
+  display: flex; 
+  animation: scroll 20s linear infinite; 
+  padding: 0 1rem;
+}
+
+@keyframes scroll {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(-50%); 
+  }
+}
+
+.card {
+  margin: 0 1rem;
+  width: 150px;
+  box-shadow: 0 4px 10px rgba(25, 72, 102, 0.9); 
+}
+
+h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}

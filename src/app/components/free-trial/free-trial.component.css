@@ -1,0 +1,56 @@
+.custom-container {
+    background-color: #FF7518;
+    border-radius: 15px;
+    margin: 20px;
+    color: white;
+    box-shadow: 0 4px 10px rgba(255, 117, 24, 0.9); /* Darker shade */
+  }
+  
+  h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .form-control {
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .form-control::placeholder {
+    color: #666;
+  }
+  
+  .btn-light {
+    background-color: #194866;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+  }
+  
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .col-md-3 {
+    position: relative;
+  }
+  
+  .error-message {
+    position: absolute;
+    bottom: -25px; 
+    left: 10;
+    width: 100%;
+    text-align: left;
+  }
+  
