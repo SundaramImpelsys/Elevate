@@ -6,7 +6,7 @@
     max-width: 900px;
     background-color: #f8f8f8;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 20px;
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
     margin: 0 auto;
   }
@@ -22,6 +22,7 @@
     animation: fadeInLeft 1s ease-in-out;
     height: 100%;
     opacity: 0.9;
+    border-radius: 20px;
   }
   
   @keyframes fadeInLeft {
