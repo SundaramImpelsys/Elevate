@@ -1,27 +1,15 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
-  loginForm: FormGroup;
+export class LoginComponent {
+  constructor(private router: Router) {}
 
-  constructor(private fb: FormBuilder) {
-    this.loginForm = this.fb.group({
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(6)]]
-    });
-  }
-
-  ngOnInit(): void {}
-
-  onSubmit() {
-    if (this.loginForm.valid) {
-      console.log(this.loginForm.value);
-      // Handle login logic here
-    }
+  navigateToSignin() {
+    this.router.navigate(['/signin']);
   }
 }

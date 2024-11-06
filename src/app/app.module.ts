@@ -25,7 +25,8 @@ import { HelpBottomSheetComponent } from './components/help-bottom-sheet/help-bo
 import { FAQComponent } from './pages/faq/faq.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { RequestToConnectComponent } from './pages/request-to-connect/request-to-connect.component';
-import { FlexLayoutModule } from '@angular/flex-layout'
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { SigninComponent } from './pages/signin/signin.component'
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { FlexLayoutModule } from '@angular/flex-layout'
     FAQComponent,
     ContactUsComponent,
     RequestToConnectComponent,
+    SigninComponent,
   ],
   imports: [
     BrowserModule,
