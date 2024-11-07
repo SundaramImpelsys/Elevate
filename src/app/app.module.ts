@@ -26,7 +26,9 @@ import { FAQComponent } from './pages/faq/faq.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { RequestToConnectComponent } from './pages/request-to-connect/request-to-connect.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { SigninComponent } from './pages/signin/signin.component'
+import { SigninComponent } from './pages/signin/signin.component';
+import { FormsModule } from '@angular/forms';
+import { TrainerService } from './services/trainer.service';
 
 @NgModule({
   declarations: [
@@ -59,9 +61,10 @@ import { SigninComponent } from './pages/signin/signin.component'
     MaterialModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    FlexLayoutModule 
+    FlexLayoutModule ,
+    FormsModule
   ],
-  providers: [],
+  providers: [TrainerService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

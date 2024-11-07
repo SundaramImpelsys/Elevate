@@ -9,6 +9,14 @@ import { Router } from '@angular/router';
 export class LoginComponent {
   constructor(private router: Router) {}
 
+  username: string = ''; 
+  password: string = ''; 
+  
+  onSubmit() { // Handle form submission 
+    console.log('Username:', this.username); 
+    console.log('Password:', this.password); 
+  }
+
   navigateToSignin() {
     this.router.navigate(['/signin']);
   }
