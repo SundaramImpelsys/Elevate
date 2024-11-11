@@ -1,0 +1,47 @@
+<footer class="bg-custom text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 mb-4">
+          <img src="assets/logo.png" alt="Logo" class="mb-2">
+          <p>&copy; 2024 Elevate. All rights reserved.</p>
+          <div class="social-icons d-flex justify-content-start">
+            <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <ul class="list-unstyled">
+            <li class="mb-2"><a routerLink="/dashboard" class="text-white">Dashboard</a></li>
+            <li class="mb-2"><a routerLink="/announcement" class="text-white">Announcement</a></li>
+            <li class="mb-2"><a routerLink="/review" class="text-white">Review</a></li>
+            <li class="mb-2"><a routerLink="/faq" class="text-white">FAQ</a></li>
+            <li class="mb-2"><a routerLink="/contact-us" class="text-white">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 mb-4">
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#" class="text-white">Accessibility Statement</a></li>
+            <li class="mb-2"><a href="#" class="text-white">Cookies Policy</a></li>
+            <li class="mb-2"><a href="#" class="text-white">Cookies Settings</a></li>
+            <li class="mb-2"><a href="#" class="text-white">Site Policy</a></li>
+            <li class="mb-2"><a href="#" class="text-white">Privacy Notice</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 mb-4">
+          <h5>Subscribe to Newsletter</h5>
+          <form #subscribeForm="ngForm" (ngSubmit)="onSubscribe(subscribeForm)">
+            <div class="mb-3">
+              <input type="email" class="form-control" placeholder="Enter your email" [(ngModel)]="email" name="email" #emailCtrl="ngModel" required>
+              <div *ngIf="emailCtrl.invalid && (emailCtrl.dirty || emailCtrl.touched)" class="text-white">
+                Please enter a valid email address.
+              </div>
+            </div>
+            <button type="submit" class="btn btn-light">Subscribe</button>
+            <i *ngIf="loading" class="fas fa-spinner fa-spin ms-2"></i>
+          </form>
+        </div>
+      </div>
+    </div>
+  </footer>
+  

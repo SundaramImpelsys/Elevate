@@ -5,7 +5,8 @@ import { LoginComponent } from './pages/login/login.component';
 import { SigninComponent } from './pages/signin/signin.component';
 import {FAQComponent} from './pages/faq/faq.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
-import { RequestToConnectComponent } from './pages/request-to-connect/request-to-connect.component';
+import { AnnouncementsComponent } from './pages/announcements/announcements.component';
+import { ReviewComponent } from './pages/review/review.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -13,8 +14,8 @@ const routes: Routes = [
   {path: 'signin', component: SigninComponent},
   { path: 'FAQ', component: FAQComponent},
   { path: 'contact-us', component: ContactUsComponent},
-  { path:'request-to-connect', component: RequestToConnectComponent},
-// For any other invalid routes
+  { path:'announcement', component: AnnouncementsComponent},
+  { path:'review', component: ReviewComponent},
 ];
 
 @NgModule({

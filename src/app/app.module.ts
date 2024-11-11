@@ -24,11 +24,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HelpBottomSheetComponent } from './components/help-bottom-sheet/help-bottom-sheet.component';
 import { FAQComponent } from './pages/faq/faq.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
-import { RequestToConnectComponent } from './pages/request-to-connect/request-to-connect.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { SigninComponent } from './pages/signin/signin.component';
 import { FormsModule } from '@angular/forms';
 import { TrainerService } from './services/trainer.service';
+import { AnnouncementsComponent } from './pages/announcements/announcements.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FooterComponent } from './pages/footer/footer.component';
+import { ReviewComponent } from './pages/review/review.component';
 
 @NgModule({
   declarations: [
@@ -52,8 +55,10 @@ import { TrainerService } from './services/trainer.service';
     HelpBottomSheetComponent,
     FAQComponent,
     ContactUsComponent,
-    RequestToConnectComponent,
     SigninComponent,
+    AnnouncementsComponent,
+    FooterComponent,
+    ReviewComponent,
   ],
   imports: [
     BrowserModule,
@@ -62,7 +67,8 @@ import { TrainerService } from './services/trainer.service';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     FlexLayoutModule ,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [TrainerService ],
   bootstrap: [AppComponent]

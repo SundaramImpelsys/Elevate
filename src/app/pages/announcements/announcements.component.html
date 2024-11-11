@@ -1,0 +1,31 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <div class="custom-search">
+    <input type="text" placeholder="Search..." (input)="onSearch($event)" />
+    <i class="fas fa-search search-icon"></i>
+  </div>
+  
+  <div class="container">
+    <div class="row">
+      <div *ngFor="let announcement of paginatedAnnouncements" class="col-md-4">
+        <div class="card">
+          <img [src]="announcement.imageSrc" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">{{ announcement.title }}</h5>
+            <p class="card-text">{{ announcement.description }}</p>
+            <p class="card-text">
+              <small class="text-muted">Posted by {{ announcement.postedBy }} - {{ announcement.time }}</small>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav>
+      <ul class="pagination">
+        <li *ngFor="let page of totalPages" class="page-item" [ngClass]="{'active-page': currentPage === page}">
+          <a class="page-link" (click)="onPageChange(page)">{{ page }}</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  

@@ -10,6 +10,10 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
 import { MatListModule } from '@angular/material/list';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatSidenavModule } from '@angular/material/sidenav';
+
 
 @NgModule({
   declarations: [],
@@ -24,7 +28,11 @@ import { MatExpansionModule } from '@angular/material/expansion';
     MatIconModule,
     MatBottomSheetModule,
     MatListModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatInputModule,
+    MatSelectModule,
+    MatSidenavModule,
+
   ],
   exports: [
     BrowserAnimationsModule,

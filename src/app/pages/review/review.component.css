@@ -1,0 +1,23 @@
+h1{
+    margin: 3% 0;
+    color: #194866;
+    font-weight: 6rem;
+}
+.carousel{
+    margin: 0 3%;
+}
+
+.carousel-item img {
+    max-height: 440px;
+    object-fit: cover;
+    border-radius: 30px;
+  }
+  
+  .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    width: auto;
+    margin-top: 10px;
+  }
+  

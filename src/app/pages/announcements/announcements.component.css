@@ -1,0 +1,57 @@
+.container {
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .card {
+    margin-bottom: 20px;
+  }
+  
+  .pagination {
+    justify-content: center;
+  }
+  
+
+
+  .custom-search {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    box-shadow: 0 4px 10px rgba(25, 72, 102, 0.1);
+    border-radius: 25px; 
+    padding: 10px 20px; 
+    display: flex;
+    align-items: center;
+  }
+  
+  .custom-search input {
+    width: calc(100% - 40px); 
+    border: none;
+    background: none;
+    color: #194866;
+    padding: 10px;
+    outline: none;
+    font-size: 16px;
+
+  }
+  
+  .search-icon {
+    background-color: #194866;
+    position: absolute;
+    right: 20px; 
+    font-size: 18px;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    margin: 0;
+  }
+
+  .page-link { 
+    color: #194866; 
+}
+  .active-page .page-link {
+    background-color: #ff7518;
+    color: white;
+  }

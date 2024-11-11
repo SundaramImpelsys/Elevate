@@ -1,7 +1,7 @@
 <div class="community-announcement">
     <div class="d-flex justify-content-between align-items-center mb-4">
       <h2><strong>Community Announcements</strong></h2>
-      <button class="btn btn-announcement">Go to Announcements</button>
+      <button class="btn btn-announcement" routerLink="announcement">Go to Announcements</button>
     </div>
     <div *ngFor="let announcement of announcements">
       <app-announcement-card [imageSrc]="announcement.imageSrc" [title]="announcement.title" [description]="announcement.description" [postedBy]="announcement.postedBy" [time]="announcement.time"></app-announcement-card>

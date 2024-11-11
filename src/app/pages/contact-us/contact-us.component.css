@@ -3,14 +3,16 @@
   }
   
   .map-container {
-    background-color: rgba(25, 72, 102, 0.9);
+    background-color: #194866;
     box-shadow: 0 4px 10px rgba(25, 72, 102, 0.9);
     padding: 10px;
+    max-height: 530px;
   }
   
   mat-card {
     padding: 16px;
     border: none;
+    background-color: #194866;
   }
   
   .center-header {
@@ -21,14 +23,33 @@
 
   mat-card-title{
     font-size: 2.5rem;
-    color: #ff7518;
+    color: white;
     font-weight: bold;
     margin-bottom: 1rem;
   }
-  
-  
-  mat-list-item h5 {
-    color: #194866;
+
+  mat-list-item h5, mat-label {
+    color: #fff;
+  }
+
+  button{
+    margin-left: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #ff7518;
+    color: white;
+    border: none;
+  }
+
+  input{
+    padding: 10px;
+    border-radius: 2px;
+    border: none;
+    border-radius: 5px;
+  }
+
+  input:focus{
+    border: none;
   }
 
   
