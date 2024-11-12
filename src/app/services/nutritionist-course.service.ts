@@ -6,6 +6,11 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class NutritionistCourseService {
+  private readonly jsonURL = 'assets/nutritionist-courses.json';
 
-  constructor() { }
+  constructor(private readonly http: HttpClient) {}
+
+  getCourse(): Observable<any> {
+    return this.http.get<any>(this.jsonURL);
+  }
 }

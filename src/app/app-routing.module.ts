@@ -9,6 +9,9 @@ import { AnnouncementsComponent } from './pages/announcements/announcements.comp
 import { ReviewComponent } from './pages/review/review.component';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 import { NursingCourseComponent } from './pages/nursing-course/nursing-course.component';
+import { PharmacistCoursesComponent } from './pages/pharmacist-courses/pharmacist-courses.component';
+import { NutrionistCourseComponent } from './pages/nutrionist-course/nutrionist-course.component';
+import { DoctorCoursesComponent } from './pages/doctor-courses/doctor-courses.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 const routes: Routes = [
@@ -21,7 +24,10 @@ const routes: Routes = [
   { path:'review', component: ReviewComponent},
   { path:'forgotPassword', component: ForgotPasswordComponent},
   { path:'nursingCourse', component: NursingCourseComponent},
-  { path:'dashboard', component: DashboardComponent}
+  { path:'dashboard', component: DashboardComponent},
+  { path:'pharmacistCourses', component: PharmacistCoursesComponent},
+  { path:'nutrionistCourses', component: NutrionistCourseComponent},
+  { path:'doctorCourses', component: DoctorCoursesComponent}
   
 ];
 

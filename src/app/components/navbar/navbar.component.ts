@@ -1,5 +1,6 @@
 import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {MatIconModule} from '@angular/material/icon';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -9,6 +10,9 @@ import {MatIconModule} from '@angular/material/icon';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NavbarComponent {
+
+  constructor(private readonly router: Router) {}
+  
   isLoggedIn: boolean = false; 
   
   ngOnInit(): void { 
@@ -23,5 +27,6 @@ export class NavbarComponent {
   logout(): void { 
     localStorage.removeItem('user'); 
     this.isLoggedIn = false; 
+    this.router.navigate(['']);
   }
 }

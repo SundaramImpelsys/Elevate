@@ -1,12 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import { NurseCourseService } from 'src/app/services/nurse-course.service';
+import { Component } from '@angular/core';
+import { DoctorCourseService } from 'src/app/services/doctor-course.service';
 
 @Component({
-  selector: 'app-nursing-course',
-  templateUrl: './nursing-course.component.html',
-  styleUrls: ['./nursing-course.component.css']
+  selector: 'app-doctor-courses',
+  templateUrl: './doctor-courses.component.html',
+  styleUrls: ['./doctor-courses.component.css']
 })
-export class NursingCourseComponent implements OnInit {
+export class DoctorCoursesComponent {
   courses: any = [];
   filteredCourses: any = [];
   uniqueTrainers: any = [];
@@ -15,10 +15,10 @@ export class NursingCourseComponent implements OnInit {
   selectedTrainer: string = '';
   selectedRating: number | null = null;
 
-  constructor(private readonly nurseCourseService: NurseCourseService) {}
+  constructor(private readonly doctorCourseService: DoctorCourseService) {}
 
   ngOnInit(): void {
-    this.nurseCourseService.getCourse().subscribe((data) => {
+    this.doctorCourseService.getCourse().subscribe((data) => {
       this.courses = data;
       this.filteredCourses = data;
       this.uniqueTrainers = [...new Set(data.map((course: any) => course.trainerName))];
@@ -32,5 +32,4 @@ export class NursingCourseComponent implements OnInit {
              (this.selectedRating !== null ? course.rating === Number(this.selectedRating) : true);
     });
   }
-  
 }

@@ -12,12 +12,32 @@ export class ForgotPasswordComponent {
   email: string = ''; 
   newPassword: string = ''; 
   confirmPassword: string = ''; 
+  emailExists: boolean = true; 
 
   constructor(private router: Router, private dataService: DataService) {}
+
+  emailExist(): void {
+    this.dataService.getItems().subscribe((items: UserData[]) => {
+      const user = items.find(item => item.email === this.email);
+      this.emailExists = !!user; // Set emailExists based on whether the user is found
+    }, (error: any) => {
+      console.error('Error fetching items:', error);
+      this.emailExists = false; // Default to false on error
+    });
+  }
+
+  clearEmailError(): void { 
+    this.emailExists = true; 
+  }
 
   onSubmit() {
     if (this.newPassword !== this.confirmPassword) {
       alert('New Password and Confirm Password do not match.');
+      return;
+    }
+
+    if (!this.emailExists) {
+      alert('Email doesn\'t exist, please create your account');
       return;
     }
 
@@ -37,8 +57,6 @@ export class ForgotPasswordComponent {
             alert('An error occurred. Please try again.');
           }
         );
-      } else {
-        alert('Email doesn\'t exit, please create your account');
       }
     }, (error: any) => {
       console.error('Error fetching items:', error);

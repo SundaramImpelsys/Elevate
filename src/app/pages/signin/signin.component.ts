@@ -35,8 +35,14 @@ export class SigninComponent {
     onSubmit() { 
 
       if (this.isStep3Valid()) {  
-        if (this.registrationData.role === 'trainer') { this.trainerService.incrementTrainerCount(); this.router.navigate(['']); } else { this.router.navigate(['']); }
-        // console.log("Name:", this.registrationData.name); console.log("Email:", this.registrationData.email); console.log("Gender:", this.registrationData.gender); console.log("Role:", this.registrationData.role); console.log("Profession:", this.registrationData.profession); console.log("Experience:", this.registrationData.experience); console.log("Password:", this.registrationData.password); 
+        if (this.registrationData.role === 'trainer') { 
+          this.trainerService.incrementTrainerCount(); 
+          this.router.navigate(['']); 
+        } 
+        else { 
+          this.router.navigate(['login']); 
+        }
+  
 
         this.dataService.addItem(this.registrationData).subscribe(response => {
           console.log('Registration Data added:', response);
