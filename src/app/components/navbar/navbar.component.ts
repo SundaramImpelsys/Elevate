@@ -9,5 +9,19 @@ import {MatIconModule} from '@angular/material/icon';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NavbarComponent {
+  isLoggedIn: boolean = false; 
+  
+  ngOnInit(): void { 
+    this.checkLoginStatus(); }
 
+  
+  checkLoginStatus(): void { 
+    const user = localStorage.getItem('user'); 
+    this.isLoggedIn = !!user; 
+  }
+
+  logout(): void { 
+    localStorage.removeItem('user'); 
+    this.isLoggedIn = false; 
+  }
 }

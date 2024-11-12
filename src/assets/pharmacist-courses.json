@@ -1,0 +1,39 @@
+[
+    {
+      "title": "Pharmacology Basics",
+      "description": "Introduction to pharmacology and medication management.",
+      "trainerName": "David Lee",
+      "rating": 4.5
+    },
+    {
+      "title": "Clinical Pharmacy",
+      "description": "Advanced clinical pharmacy practices and patient care.",
+      "trainerName": "David Lee",
+      "rating": 4.7
+    },
+    {
+      "title": "Pharmaceutical Calculations",
+      "description": "Essential calculations for accurate medication dispensing.",
+      "trainerName": "David Lee",
+      "rating": 4.8
+    },
+    {
+      "title": "Pharmacy Management",
+      "description": "Managing a pharmacy practice, including staff and inventory.",
+      "trainerName": "Evelyn King",
+      "rating": 4.6
+    },
+    {
+      "title": "Drug Interactions",
+      "description": "Understanding and managing drug interactions.",
+      "trainerName": "Evelyn King",
+      "rating": 4.7
+    },
+    {
+      "title": "Compounding Medications",
+      "description": "Techniques for compounding customized medications.",
+      "trainerName": "Frank Harris",
+      "rating": 4.9
+    }
+  ]
+  

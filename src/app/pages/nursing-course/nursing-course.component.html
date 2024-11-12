@@ -1,0 +1,49 @@
+<!-- <app-navbar></app-navbar>
+
+
+<div class="container">
+    <div class="row" >
+        <div class="col-md-4 mb-4" *ngFor="let course of courses">
+      <app-courses-card 
+        [title]="course.title"
+        [description]="course.description"
+        [trainerName]="course.trainerName"
+        [rating]="course.rating"
+        />
+        </div>
+    </div>
+  </div>
+  
+   -->
+
+   <app-navbar></app-navbar>
+
+<div class="container">
+  <!-- Filters -->
+  <div class="row my-3">
+    <div class="col-md-6">
+      <select class="form-select" [(ngModel)]="selectedTrainer" (change)="applyFilters()">
+        <option value="">All Trainers</option>
+        <option *ngFor="let trainer of uniqueTrainers">{{ trainer }}</option>
+      </select>
+    </div>
+    <div class="col-md-6">
+      <select class="form-select" [(ngModel)]="selectedRating" (change)="applyFilters()">
+        <option value="">All Ratings</option>
+        <option *ngFor="let rating of uniqueRatings">{{ rating }}</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Course Cards -->
+  <div class="row">
+    <div class="col-md-4 mb-4" *ngFor="let course of filteredCourses">
+      <app-courses-card 
+        [title]="course.title"
+        [description]="course.description"
+        [trainerName]="course.trainerName"
+        [rating]="course.rating">
+      </app-courses-card>
+    </div>
+  </div>
+</div>

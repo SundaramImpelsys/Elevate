@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { TrainerService } from '../../services/trainer.service';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-signin',
@@ -8,17 +9,19 @@ import { TrainerService } from '../../services/trainer.service';
   styleUrls: ['./signin.component.css']
 })
 export class SigninComponent {
-  name: string = ''; 
-  email: string = ''; 
-  gender: string = ''; 
-  role: string = ''; 
-  profession: string = ''; 
-  experience: number | null = null; 
-  password: string = ''; 
-  confirmPassword: string = ''; 
-  step: number = 1; 
+  registrationData: any ={
+  name:  '',
+  email: '',
+  gender:  '',
+  role:  '', 
+  profession:  '',
+  experience:  null,
+  password:  '',
+  confirmPassword:  ''
+  }
 
-  constructor(private trainerService: TrainerService, private router: Router) {}
+  step: number = 1; 
+  constructor(private trainerService: TrainerService, private router: Router, private dataService: DataService) {}
 
 
   onNext() { 
@@ -32,8 +35,12 @@ export class SigninComponent {
     onSubmit() { 
 
       if (this.isStep3Valid()) {  
-        if (this.role === 'trainer') { this.trainerService.incrementTrainerCount(); this.router.navigate(['']); } else { this.router.navigate(['']); }
-        console.log("Name:", this.name); console.log("Email:", this.email); console.log("Gender:", this.gender); console.log("Role:", this.role); console.log("Profession:", this.profession); console.log("Experience:", this.experience); console.log("Password:", this.password); 
+        if (this.registrationData.role === 'trainer') { this.trainerService.incrementTrainerCount(); this.router.navigate(['']); } else { this.router.navigate(['']); }
+        // console.log("Name:", this.registrationData.name); console.log("Email:", this.registrationData.email); console.log("Gender:", this.registrationData.gender); console.log("Role:", this.registrationData.role); console.log("Profession:", this.registrationData.profession); console.log("Experience:", this.registrationData.experience); console.log("Password:", this.registrationData.password); 
+
+        this.dataService.addItem(this.registrationData).subscribe(response => {
+          console.log('Registration Data added:', response);
+         });
       } 
     } 
     
@@ -44,14 +51,14 @@ export class SigninComponent {
     }
 
     isStep1Valid(): boolean { 
-      return !!this.name && !!this.email && !!this.gender && !!this.role; 
+      return !!this.registrationData.name && !!this.registrationData.email && !!this.registrationData.gender && !!this.registrationData.role; 
     } 
     
     isStep2Valid(): boolean { 
-      return !!this.profession.length && this.experience !== null; 
+      return !!this.registrationData.profession.length && this.registrationData.experience !== null; 
     } 
     
     isStep3Valid(): boolean { 
-      return this.password.length >= 6 && this.password === this.confirmPassword; 
+      return this.registrationData.password.length >= 6 && this.registrationData.password === this.registrationData.confirmPassword; 
     } 
   }

@@ -1,0 +1,26 @@
+{
+  "items": [
+    {
+      "id": "9c64",
+      "name": "Sundaram",
+      "email": "sundaram@gmail.com",
+      "gender": "male",
+      "role": "learner",
+      "profession": "doctor",
+      "experience": 2,
+      "password": "Sundaram",
+      "confirmPassword": "Sundaram"
+    },
+    {
+      "id": "6416",
+      "name": "Sundaram",
+      "email": "sundaram@gmail.com",
+      "gender": "male",
+      "role": "learner",
+      "profession": "pharmacist",
+      "experience": 4,
+      "password": "Sundaram",
+      "confirmPassword": "Sundaram"
+    }
+  ]
+}

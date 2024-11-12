@@ -1,0 +1,39 @@
+[
+    {
+      "title": "Clinical Medicine",
+      "description": "Comprehensive review of clinical medicine principles.",
+      "trainerName": "John Anderson",
+      "rating": 4.7
+    },
+    {
+      "title": "Advanced Diagnostics",
+      "description": "Advanced diagnostic techniques for various medical conditions.",
+      "trainerName": "John Anderson",
+      "rating": 4.8
+    },
+    {
+      "title": "Surgical Techniques",
+      "description": "Advanced surgical skills and procedures.",
+      "trainerName": "John Anderson",
+      "rating": 4.9
+    },
+    {
+      "title": "Pediatric Medicine",
+      "description": "Specialized care for pediatric patients.",
+      "trainerName": "Karen Davis",
+      "rating": 4.7
+    },
+    {
+      "title": "Geriatric Medicine",
+      "description": "Comprehensive care for elderly patients.",
+      "trainerName": "Karen Davis",
+      "rating": 4.7
+    },
+    {
+      "title": "Emergency Medicine",
+      "description": "Critical care techniques for emergency situations.",
+      "trainerName": "Linda Wilson",
+      "rating": 4.9
+    }
+  ]
+  

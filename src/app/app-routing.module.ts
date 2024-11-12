@@ -7,6 +7,9 @@ import {FAQComponent} from './pages/faq/faq.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { AnnouncementsComponent } from './pages/announcements/announcements.component';
 import { ReviewComponent } from './pages/review/review.component';
+import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
+import { NursingCourseComponent } from './pages/nursing-course/nursing-course.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -16,6 +19,10 @@ const routes: Routes = [
   { path: 'contact-us', component: ContactUsComponent},
   { path:'announcement', component: AnnouncementsComponent},
   { path:'review', component: ReviewComponent},
+  { path:'forgotPassword', component: ForgotPasswordComponent},
+  { path:'nursingCourse', component: NursingCourseComponent},
+  { path:'dashboard', component: DashboardComponent}
+  
 ];
 
 @NgModule({

@@ -12,7 +12,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="isLoggedIn">
           <a class="nav-link" routerLink="/dashboard">Dashboard</a>
         </li>
         <li class="nav-item dropdown">
@@ -20,7 +20,7 @@
             Courses
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" routerLink="/workshops">Nursing</a></li>
+            <li><a class="dropdown-item" routerLink="/nursingCourse">Nursing</a></li>
             <li><a class="dropdown-item" routerLink="/workshops">Doctor</a></li>
             <li><a class="dropdown-item" routerLink="/workshops">pharmacist</a></li>
             <li><a class="dropdown-item" routerLink="/workshops">Nutritionist</a></li>
@@ -41,7 +41,9 @@
             </ul>
           </li>
       </ul>
-      <button class="btn btn-primary background" routerLink="/login" type="button">Login</button>
+    <button class="btn btn-primary background" *ngIf="isLoggedIn" (click)="logout()">Logout</button>
+    <button class="btn btn-primary background" *ngIf="!isLoggedIn" routerLink="/login" type="button">Login</button>
+
     </div>
   </div>
 </nav>

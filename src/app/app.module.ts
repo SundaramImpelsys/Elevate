@@ -32,6 +32,16 @@ import { AnnouncementsComponent } from './pages/announcements/announcements.comp
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './pages/footer/footer.component';
 import { ReviewComponent } from './pages/review/review.component';
+import { NursingCourseComponent } from './pages/nursing-course/nursing-course.component';
+import { DoctorCourseComponent } from './pages/doctor-course/doctor-course.component';
+import { NutrionistCourseComponent } from './pages/nutrionist-course/nutrionist-course.component';
+import { PharmacistCourseComponent } from './pages/pharmacist-course/pharmacist-course.component';
+import { CoursesCardComponent } from './components/courses-card/courses-card.component';
+import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
+import { PharmacistCoursesComponent } from './pharmacist-courses/pharmacist-courses.component';
+import { DoctorCoursesComponent } from './doctor-courses/doctor-courses.component';
+import { NutrionistCoursesComponent } from './nutrionist-courses/nutrionist-courses.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +69,16 @@ import { ReviewComponent } from './pages/review/review.component';
     AnnouncementsComponent,
     FooterComponent,
     ReviewComponent,
+    NursingCourseComponent,
+    DoctorCourseComponent,
+    NutrionistCourseComponent,
+    PharmacistCourseComponent,
+    CoursesCardComponent,
+    ForgotPasswordComponent,
+    PharmacistCoursesComponent,
+    DoctorCoursesComponent,
+    NutrionistCoursesComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,

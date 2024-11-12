@@ -15,14 +15,14 @@
               <div *ngIf="step === 1">
                 <div class="mb-3">
                   <label for="name" class="form-label">Name</label>
-                  <input type="text" class="form-control" id="name" placeholder="Name" required [(ngModel)]="name" name="name" #nameModel="ngModel">
+                  <input type="text" class="form-control" id="name" placeholder="Name" required [(ngModel)]="registrationData.name" name="name" #nameModel="ngModel">
                   <div *ngIf="nameModel.invalid && nameModel.touched" class="text-danger small">
                     <div *ngIf="nameModel.errors?.['required']">Name is required.</div>
                   </div>
                 </div>
                 <div class="mb-3">
                   <label for="email" class="form-label">Email</label>
-                  <input type="email" class="form-control" id="email" placeholder="Email" required email [(ngModel)]="email" name="email" #emailModel="ngModel">
+                  <input type="email" class="form-control" id="email" placeholder="Email" required email [(ngModel)]="registrationData.email" name="email" #emailModel="ngModel">
                   <div *ngIf="emailModel.invalid && emailModel.touched" class="text-danger small">
                     <div *ngIf="emailModel.errors?.['required']">Email is required.</div>
                     <div *ngIf="emailModel.errors?.['email']">Email is not valid.</div>
@@ -31,11 +31,11 @@
                 <div class="mb-3">
                   <label class="form-label">Gender</label><br>
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" id="male" value="male" [(ngModel)]="gender" name="gender" required #genderModel="ngModel">
+                    <input class="form-check-input" type="radio" id="male" value="male" [(ngModel)]="registrationData.gender" name="gender" required #genderModel="ngModel">
                     <label class="form-check-label" for="male">Male</label>
                   </div>
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" id="female" value="female" [(ngModel)]="gender" name="gender" required #genderModel="ngModel">
+                    <input class="form-check-input" type="radio" id="female" value="female" [(ngModel)]="registrationData.gender" name="gender" required #genderModel="ngModel">
                     <label class="form-check-label" for="female">Female</label>
                   </div>
                   <div *ngIf="genderModel.invalid && genderModel.touched" class="text-danger small">
@@ -45,11 +45,11 @@
                 <div class="mb-3">
                   <label class="form-label">Role</label><br>
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" id="trainer" value="trainer" [(ngModel)]="role" name="role" required #roleModel="ngModel">
+                    <input class="form-check-input" type="radio" id="trainer" value="trainer" [(ngModel)]="registrationData.role" name="role" required #roleModel="ngModel">
                     <label class="form-check-label" for="trainer">Trainer</label>
                   </div>
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" id="learner" value="learner" [(ngModel)]="role" name="role" required #roleModel="ngModel">
+                    <input class="form-check-input" type="radio" id="learner" value="learner" [(ngModel)]="registrationData.role" name="role" required #roleModel="ngModel">
                     <label class="form-check-label" for="learner">Learner</label>
                   </div>
                   <div *ngIf="roleModel.invalid && roleModel.touched" class="text-danger small">
@@ -67,19 +67,19 @@
                 <div class="mb-3">
                   <label class="form-label">Profession</label><br>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" id="nurse" value="nurse" [(ngModel)]="profession" name="profession" required #professionModel="ngModel">
+                    <input class="form-check-input" type="radio" id="nurse" value="nurse" [(ngModel)]="registrationData.profession" name="profession" required #professionModel="ngModel">
                     <label class="form-check-label" for="nurse">Nurse</label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" id="doctor" value="doctor" [(ngModel)]="profession" name="profession" required #professionModel="ngModel">
+                    <input class="form-check-input" type="radio" id="doctor" value="doctor" [(ngModel)]="registrationData.profession" name="profession" required #professionModel="ngModel">
                     <label class="form-check-label" for="doctor">Doctor</label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" id="pharmacist" value="pharmacist" [(ngModel)]="profession" name="profession" required #professionModel="ngModel">
+                    <input class="form-check-input" type="radio" id="pharmacist" value="pharmacist" [(ngModel)]="registrationData.profession" name="profession" required #professionModel="ngModel">
                     <label class="form-check-label" for="pharmacist">Pharmacist</label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" id="nutritionist" value="nutritionist" [(ngModel)]="profession" name="profession" required #professionModel="ngModel">
+                    <input class="form-check-input" type="radio" id="nutritionist" value="nutritionist" [(ngModel)]="registrationData.profession" name="profession" required #professionModel="ngModel">
                     <label class="form-check-label" for="nutritionist">Nutritionist</label>
                   </div>
                   <div *ngIf="professionModel.invalid && professionModel.touched" class="text-danger small">
@@ -88,7 +88,7 @@
                 </div>
                 <div class="mb-3">
                   <label for="experience" class="form-label">Years of Experience</label>
-                  <input type="number" class="form-control" id="experience" placeholder="Years of Experience" required [(ngModel)]="experience" name="experience" #experienceModel="ngModel" min="0">
+                  <input type="number" class="form-control" id="experience" placeholder="Years of Experience" required [(ngModel)]="registrationData.experience" name="experience" #experienceModel="ngModel" min="0">
                   <div *ngIf="experienceModel.invalid && experienceModel.touched" class="text-danger small">
                     <div *ngIf="experienceModel.errors?.['required']">Years of experience is required.</div>
                     <div *ngIf="experienceModel.errors?.['min']">Experience cannot be negative.</div>
@@ -106,7 +106,7 @@
               <div *ngIf="step === 3">
                 <div class="mb-3">
                   <label for="password" class="form-label">Password</label>
-                  <input type="password" class="form-control" id="password" placeholder="Password" required [(ngModel)]="password" name="password" #passwordModel="ngModel" minlength="6">
+                  <input type="password" class="form-control" id="password" placeholder="Password" required [(ngModel)]="registrationData.password" name="password" #passwordModel="ngModel" minlength="6">
                   <div *ngIf="passwordModel.invalid && passwordModel.touched" class="text-danger small">
                     <div *ngIf="passwordModel.errors?.['required']">Password is required.</div>
                     <div *ngIf="passwordModel.errors?.['minlength']">Password must be at least 6 characters long.</div>
@@ -114,7 +114,7 @@
                 </div>
                 <div class="mb-3">
                   <label for="confirmPassword" class="form-label">Confirm Password</label>
-                  <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password" required [(ngModel)]="confirmPassword" name="confirmPassword" #confirmPasswordModel="ngModel" [pattern]="password">
+                  <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password" required [(ngModel)]="registrationData.confirmPassword" name="confirmPassword" #confirmPasswordModel="ngModel" [pattern]="registrationData.password">
                   <div *ngIf="confirmPasswordModel.invalid && confirmPasswordModel.touched" class="text-danger small">
                     <div *ngIf="confirmPasswordModel.errors?.['required']">Confirming your password is required.</div>
                     <div *ngIf="confirmPasswordModel.errors?.['pattern']">Passwords must match.</div>

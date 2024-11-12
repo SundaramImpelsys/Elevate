@@ -1,0 +1,39 @@
+[
+    {
+      "title": "Nutrition Fundamentals",
+      "description": "Basic principles of nutrition and diet planning.",
+      "trainerName": "Grace Williams",
+      "rating": 4.6
+    },
+    {
+      "title": "Advanced Nutrition Therapy",
+      "description": "Therapeutic nutrition interventions for various health conditions.",
+      "trainerName": "Grace Williams",
+      "rating": 4.8
+    },
+    {
+      "title": "Sports Nutrition",
+      "description": "Optimizing nutrition for athletic performance.",
+      "trainerName": "Grace Williams",
+      "rating": 4.9
+    },
+    {
+      "title": "Public Health Nutrition",
+      "description": "Strategies for improving community health through nutrition.",
+      "trainerName": "Henry Brown",
+      "rating": 4.7
+    },
+    {
+      "title": "Pediatric Nutrition",
+      "description": "Nutritional needs and interventions for children.",
+      "trainerName": "Henry Brown",
+      "rating": 4.7
+    },
+    {
+      "title": "Weight Management",
+      "description": "Effective strategies for weight loss and maintenance.",
+      "trainerName": "Isabel Martinez",
+      "rating": 4.9
+    }
+  ]
+  

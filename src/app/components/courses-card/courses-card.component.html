@@ -1,0 +1,16 @@
+
+    <div class="card">
+      <!-- <img [src]="image" class="card-img-top" alt="Course"> -->
+      <div class="card-body">
+        <h5 class="card-title">{{ title }}</h5>
+        <p class="card-text">{{ description }}</p>
+        <p class="card-text"><small class="text-muted">Trainer: {{ trainerName }}</small></p>
+        <div class="rating">
+          <ng-container *ngFor="let star of [1, 2, 3, 4, 5]; let i = index">
+            <i class="fas" [ngClass]="star <= rating ? 'fa-star text-warning' : 'fa-star text-secondary'"></i>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+
+  
