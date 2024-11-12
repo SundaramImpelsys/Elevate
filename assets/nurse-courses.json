@@ -1,0 +1,39 @@
+[
+    {
+      "title": "Fundamentals of Nursing",
+      "description": "Learn the basics of nursing care, including patient assessment and vital signs monitoring.",
+      "trainerName": "Alice Johnson",
+      "rating": 5
+    },
+    {
+      "title": "Advanced Patient Care",
+      "description": "Advanced techniques in patient care, including wound management and intravenous therapy.",
+      "trainerName": "Alice Johnson",
+      "rating": 3
+    },
+    {
+      "title": "Nursing Leadership",
+      "description": "Develop leadership skills for managing nursing teams and improving patient outcomes.",
+      "trainerName": "Alice Johnson",
+      "rating": 4
+    },
+    {
+      "title": "Pediatric Nursing",
+      "description": "Specialized care techniques for pediatric patients.",
+      "trainerName": "Bob Smith",
+      "rating": 4
+    },
+    {
+      "title": "Geriatric Nursing",
+      "description": "Comprehensive care for elderly patients, including chronic disease management.",
+      "trainerName": "Bob Smith",
+      "rating": 4
+    },
+    {
+      "title": "Emergency Nursing",
+      "description": "Critical care techniques for emergency situations.",
+      "trainerName": "Carol White",
+      "rating": 4
+    }
+  ]
+  
