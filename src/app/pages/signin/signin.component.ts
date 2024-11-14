@@ -33,9 +33,6 @@ export class SigninComponent {
     this.dataService.getItems().subscribe((items: UserData[]) => {
       const user = items.find(item => item.email === this.registrationData.email);
       this.emailExists = !!user; // Set emailExists based on whether the user is found
-      if(this.emailExists){
-        alert('Email already exists. Please choose a different one.');
-      }
     }, (error: any) => {
       console.error('Error fetching items:', error);
       this.emailExists = false; // Default to false on error

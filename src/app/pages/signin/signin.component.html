@@ -27,6 +27,7 @@
                     <div *ngIf="emailModel.errors?.['required']">Email is required.</div>
                     <div *ngIf="emailModel.errors?.['email']">Email is not valid.</div>
                   </div>
+                  <div *ngIf="emailExists" class="text-danger small">Email already exists. Try with another one</div>
                 </div>
                 <div class="mb-3">
                   <label class="form-label">Gender</label><br>
@@ -56,7 +57,7 @@
                     <div *ngIf="roleModel.errors?.['required']">Role is required.</div>
                   </div>
                 </div>
-                <button type="button" class="btn w-100" [disabled]="!signupForm.form.valid" (click)="onNext()">Next</button>
+                <button type="button" class="btn w-100" [disabled]="emailExists || !signupForm.form.valid" (click)="onNext()">Next</button>
                 <div class="mt-3 text-center">
                     <p>Already having an account? <a href="#" routerLink="/login">LogIn</a></p>
                 </div>
