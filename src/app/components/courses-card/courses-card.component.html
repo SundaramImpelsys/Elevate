@@ -10,6 +10,9 @@
             <i class="fas" [ngClass]="star <= rating ? 'fa-star text-warning' : 'fa-star text-secondary'"></i>
           </ng-container>
         </div>
+        <div *ngIf="isLoggedIn">
+          <button (click)="sendData()">Enroll Now</button>
+        </div>
       </div>
     </div>
 

@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class DoctorCourseService {
-  private readonly jsonURL = 'assets/doctor-courses.json';
+  private readonly jsonURL = 'assets/json/doctor-courses.json';
 
   constructor(private readonly http: HttpClient) {}
 

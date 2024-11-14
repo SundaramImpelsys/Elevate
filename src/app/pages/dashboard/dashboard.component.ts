@@ -11,10 +11,9 @@ import { UserData } from '../../interfaces/user.data';
 export class DashboardComponent implements OnInit {
   user: UserData | null = null;
 
-  constructor(private router: Router, private dataService: DataService) {}
+  constructor(private readonly router: Router, private readonly dataService: DataService) {}
 
   ngOnInit(): void {
-    console.log(localStorage.getItem('user'))
     const storedUser = localStorage.getItem('user');
     if (storedUser) {
       this.user = JSON.parse(storedUser);

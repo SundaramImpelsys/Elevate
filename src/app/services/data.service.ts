@@ -7,8 +7,8 @@ import { UserData } from '../interfaces/user.data';
   providedIn: 'root'
 })
 export class DataService {
-  private apiUrl = 'https://6731ca207aaf2a9aff121696.mockapi.io/elevate/user';
-  constructor(private http: HttpClient) {}
+  private readonly apiUrl = 'https://6731ca207aaf2a9aff121696.mockapi.io/elevate/user';
+  constructor(private readonly http: HttpClient) {}
 
   addItem(item: any): Observable<any> {
     return this.http.post<any>(this.apiUrl, item);

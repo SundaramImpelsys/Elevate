@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AnnouncementService {
-  private readonly jsonURL = 'assets/announcements.json';
+  private readonly jsonURL = 'assets/json/announcements.json';
 
   constructor(private readonly http: HttpClient) {}
 

@@ -22,7 +22,7 @@
                 </div>
                 <div class="mb-3">
                   <label for="email" class="form-label">Email</label>
-                  <input type="email" class="form-control" id="email" placeholder="Email" required email [(ngModel)]="registrationData.email" name="email" #emailModel="ngModel">
+                  <input type="email" class="form-control" id="email" placeholder="Email" required email [(ngModel)]="registrationData.email" name="email" (blur)="emailExist()" #emailModel="ngModel">
                   <div *ngIf="emailModel.invalid && emailModel.touched" class="text-danger small">
                     <div *ngIf="emailModel.errors?.['required']">Email is required.</div>
                     <div *ngIf="emailModel.errors?.['email']">Email is not valid.</div>
@@ -104,17 +104,19 @@
             </div>
               <!-- Step 3 -->
               <div *ngIf="step === 3">
-                <div class="mb-3">
+                <div class="mb-3 position-relative">
                   <label for="password" class="form-label">Password</label>
-                  <input type="password" class="form-control" id="password" placeholder="Password" required [(ngModel)]="registrationData.password" name="password" #passwordModel="ngModel" minlength="6">
+                  <input [type]="isPasswordVisible ? 'text' : 'password'" class="form-control" id="password" placeholder="Password" required [(ngModel)]="registrationData.password" name="password" #passwordModel="ngModel" minlength="6">
+                  <i class="fa" [ngClass]="isPasswordVisible ? 'fa-eye-slash' : 'fa-eye'" (click)="togglePasswordVisibility()" style="position: absolute; right: 10px; top: 45px; cursor: pointer; opacity: 80%;"></i>
                   <div *ngIf="passwordModel.invalid && passwordModel.touched" class="text-danger small">
                     <div *ngIf="passwordModel.errors?.['required']">Password is required.</div>
                     <div *ngIf="passwordModel.errors?.['minlength']">Password must be at least 6 characters long.</div>
                   </div>
                 </div>
-                <div class="mb-3">
+                <div class="mb-3 position-relative">
                   <label for="confirmPassword" class="form-label">Confirm Password</label>
-                  <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password" required [(ngModel)]="registrationData.confirmPassword" name="confirmPassword" #confirmPasswordModel="ngModel" [pattern]="registrationData.password">
+                  <input [type]="isConfrimPasswordVisible ? 'text' : 'password'" class="form-control" id="confirmPassword" placeholder="Confirm Password" required [(ngModel)]="registrationData.confirmPassword" name="confirmPassword" #confirmPasswordModel="ngModel" [pattern]="registrationData.password">
+                  <i class="fa" [ngClass]="isConfrimPasswordVisible ? 'fa-eye-slash' : 'fa-eye'" (click)="toggleConfrimPasswordVisibility()" style="position: absolute; right: 10px; top: 45px; cursor: pointer; opacity: 80%;"></i>
                   <div *ngIf="confirmPasswordModel.invalid && confirmPasswordModel.touched" class="text-danger small">
                     <div *ngIf="confirmPasswordModel.errors?.['required']">Confirming your password is required.</div>
                     <div *ngIf="confirmPasswordModel.errors?.['pattern']">Passwords must match.</div>

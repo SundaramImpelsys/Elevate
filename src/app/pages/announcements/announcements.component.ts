@@ -30,6 +30,7 @@ export class AnnouncementsComponent implements OnInit {
       announcement.description.toLowerCase().includes(query) ||
       announcement.postedBy.toLowerCase().includes(query)
     );
+    this.currentPage = 1;
   }
 
   get paginatedAnnouncements(): any[] {

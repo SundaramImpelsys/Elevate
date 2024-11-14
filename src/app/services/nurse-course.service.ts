@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class NurseCourseService {
-  private readonly jsonURL = 'assets/nurse-courses.json';
+  private readonly jsonURL = 'assets/json/nurse-courses.json';
 
   constructor(private readonly http: HttpClient) {}
 

@@ -1,4 +1,13 @@
-.card{
-    min-height: 200px;
-    max-height: 250px;
+
+button{
+    margin-top: 10px;
+    padding: 6px;
+    border-radius: 10px;
+    color: white;
+    background-color: #194866;
+    border: none;
+}
+
+button:hover{
+    background-color: #ff7518;
 }

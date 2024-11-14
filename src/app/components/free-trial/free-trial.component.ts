@@ -27,7 +27,7 @@ export class FreeTrialComponent implements OnInit {
         console.log('Registration Data added:', response);
       });
       console.log('Form Data:', formData);
-      alert('We will get back to you soon!');
+      alert('Thanks for submiting! We will get back to you soon!');
     } else {
       alert('Please fill out all the required fields');
     }

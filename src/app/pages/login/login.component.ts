@@ -9,14 +9,23 @@ import { UserData } from '../../interfaces/user.data';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  username: string = ''; 
+  email: string = ''; 
   password: string = ''; 
+  emailExists: boolean = true;
+  isPasswordVisible: boolean = false; 
 
   constructor(private router: Router, private dataService: DataService) {}
+  
+
+
+  togglePasswordVisibility(): void { 
+    this.isPasswordVisible = !this.isPasswordVisible; 
+  }
+
 
   onSubmit() {
     this.dataService.getItems().subscribe((items: UserData[]) => {
-      const user = items.find(item => item.name === this.username && item.password === this.password);
+      const user = items.find(item => item.email === this.email && item.password === this.password);
       if (user) {
         console.log('Login successful:', user);
         localStorage.setItem('user', JSON.stringify(user));

@@ -1,16 +1,17 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class NutritionistCourseService {
-  private readonly jsonURL = 'assets/json/nutritionist-courses.json';
+export class ReviewService {
+
+  private readonly jsonURL = 'assets/json/reviews.json';
 
   constructor(private readonly http: HttpClient) {}
 
-  getCourse(): Observable<any> {
+  getReview(): Observable<any> {
     return this.http.get<any>(this.jsonURL);
   }
 }

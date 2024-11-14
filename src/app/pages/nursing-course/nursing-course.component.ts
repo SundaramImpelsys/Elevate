@@ -9,8 +9,8 @@ import { NurseCourseService } from 'src/app/services/nurse-course.service';
 export class NursingCourseComponent implements OnInit {
   courses: any = [];
   filteredCourses: any = [];
-  uniqueTrainers: any = [];
-  uniqueRatings: any = [];
+  uniqueTrainers: string[] = [];
+  uniqueRatings: number[] = [];
 
   selectedTrainer: string = '';
   selectedRating: number | null = null;
@@ -21,16 +21,26 @@ export class NursingCourseComponent implements OnInit {
     this.nurseCourseService.getCourse().subscribe((data) => {
       this.courses = data;
       this.filteredCourses = data;
-      this.uniqueTrainers = [...new Set(data.map((course: any) => course.trainerName))];
-      this.uniqueRatings = [...new Set(data.map((course: any) => course.rating))];
+      this.uniqueTrainers = this.getUniqueSortedTrainers(data);
+      this.uniqueRatings = this.getUniqueSortedRatings(data);
     });
+  }
+
+  getUniqueSortedTrainers(data: any[]): string[] {
+    const trainers = [...new Set(data.map(course => course.trainerName))];
+    return trainers.sort((a, b) => a.localeCompare(b));
+  }
+
+  getUniqueSortedRatings(data: any[]): number[] {
+    const ratings = [...new Set(data.map(course => course.rating))];
+    return ratings.sort((a, b) => a - b);
   }
 
   applyFilters(): void {
     this.filteredCourses = this.courses.filter((course: any) => {
-      return (this.selectedTrainer ? course.trainerName === this.selectedTrainer : true) &&
-             (this.selectedRating !== null ? course.rating === Number(this.selectedRating) : true);
+      const trainerMatch = this.selectedTrainer ? course.trainerName === this.selectedTrainer : true;
+      const ratingMatch = this.selectedRating !== null ? course.rating === Number(this.selectedRating) : true;
+      return trainerMatch && ratingMatch;
     });
   }
-  
 }

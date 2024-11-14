@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { TrainerService } from '../../services/trainer.service';
 import { DataService } from 'src/app/services/data.service';
+import { UserData } from 'src/app/interfaces/user.data';
 
 @Component({
   selector: 'app-signin',
@@ -17,11 +18,29 @@ export class SigninComponent {
   profession:  '',
   experience:  null,
   password:  '',
-  confirmPassword:  ''
+  confirmPassword:  '',
+  enrolledCourses: []
   }
+  isPasswordVisible: boolean = false; 
+  isConfrimPasswordVisible: boolean = false; 
 
   step: number = 1; 
-  constructor(private trainerService: TrainerService, private router: Router, private dataService: DataService) {}
+  emailExists: boolean = false;
+
+  constructor(private readonly trainerService: TrainerService, private readonly router: Router, private readonly dataService: DataService) {}
+
+  emailExist(): void {
+    this.dataService.getItems().subscribe((items: UserData[]) => {
+      const user = items.find(item => item.email === this.registrationData.email);
+      this.emailExists = !!user; // Set emailExists based on whether the user is found
+      if(this.emailExists){
+        alert('Email already exists. Please choose a different one.');
+      }
+    }, (error: any) => {
+      console.error('Error fetching items:', error);
+      this.emailExists = false; // Default to false on error
+    });
+  }
 
 
   onNext() { 
@@ -42,7 +61,8 @@ export class SigninComponent {
         else { 
           this.router.navigate(['login']); 
         }
-  
+        console.log(this.registrationData);
+        delete this.registrationData.confirmPassword;
 
         this.dataService.addItem(this.registrationData).subscribe(response => {
           console.log('Registration Data added:', response);
@@ -67,4 +87,12 @@ export class SigninComponent {
     isStep3Valid(): boolean { 
       return this.registrationData.password.length >= 6 && this.registrationData.password === this.registrationData.confirmPassword; 
     } 
+
+    togglePasswordVisibility(): void { 
+      this.isPasswordVisible = !this.isPasswordVisible; 
+    }
+
+    toggleConfrimPasswordVisibility(): void { 
+      this.isConfrimPasswordVisible = !this.isConfrimPasswordVisible; 
+    }
   }

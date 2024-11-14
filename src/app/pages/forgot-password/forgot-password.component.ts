@@ -13,8 +13,10 @@ export class ForgotPasswordComponent {
   newPassword: string = ''; 
   confirmPassword: string = ''; 
   emailExists: boolean = true; 
+  isPasswordVisible: boolean = false; 
+  isConfrimPasswordVisible: boolean = false; 
 
-  constructor(private router: Router, private dataService: DataService) {}
+  constructor(private readonly router: Router, private readonly dataService: DataService) {}
 
   emailExist(): void {
     this.dataService.getItems().subscribe((items: UserData[]) => {
@@ -28,6 +30,14 @@ export class ForgotPasswordComponent {
 
   clearEmailError(): void { 
     this.emailExists = true; 
+  }
+
+  togglePasswordVisibility(): void { 
+    this.isPasswordVisible = !this.isPasswordVisible; 
+  }
+
+  toggleConfrimPasswordVisibility(): void { 
+    this.isConfrimPasswordVisible = !this.isConfrimPasswordVisible; 
   }
 
   onSubmit() {
@@ -45,7 +55,7 @@ export class ForgotPasswordComponent {
       const user = items.find(item => item.email === this.email);
       if (user) {
         user.password = this.newPassword; 
-        user.confirmPassword = this.confirmPassword;
+        // user.confirmPassword = this.confirmPassword;
         this.dataService.putItem(user.id, user).subscribe(
           (response: UserData) => {
             console.log('Password updated successfully:', response);
