@@ -7,6 +7,6 @@ export interface UserData {
     profession: string;
     experience: number;
     password: string;
-    // confirmPassword: string;
-    enrolledCourses: any;
+    confirmPassword: string;
+    enrolledCourses: Array<string>;
 }

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MaterialModule } from './shared/material/material.module';
 import { AppRoutingModule } from './app-routing.module';
@@ -39,6 +39,10 @@ import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password
 import { PharmacistCoursesComponent } from './pages/pharmacist-courses/pharmacist-courses.component';
 import { DoctorCoursesComponent } from './pages/doctor-courses/doctor-courses.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { authReducer } from './store/reducers/userVerification.reducers';
 
 @NgModule({
   declarations: [
@@ -82,7 +86,10 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
     BrowserAnimationsModule,
     FlexLayoutModule ,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    StoreModule.forRoot({auth: authReducer}),
+    EffectsModule.forRoot([]),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() })
   ],
   providers: [TrainerService ],
   bootstrap: [AppComponent]

@@ -3,6 +3,11 @@ import { UserData } from 'src/app/interfaces/user.data';
 import { DataService } from 'src/app/services/data.service';
 import { Router } from '@angular/router';
 
+import { Store } from '@ngrx/store'; 
+import { selectIsLoggedIn, selectUser } from 'src/app/store/selectors/userVerification.selectors';
+import { AuthState } from 'src/app/store/reducers/userVerification.reducers';
+import { updateUser } from 'src/app/store/actions/userVerification.actions';
+
 @Component({
   selector: 'app-courses-card',
   templateUrl: './courses-card.component.html',
@@ -10,10 +15,11 @@ import { Router } from '@angular/router';
 })
 export class CoursesCardComponent {
   user: UserData | null = null;
-
-  constructor(private readonly dataService: DataService, private router: Router) {}
-
   isLoggedIn: boolean = false;
+
+  constructor(private readonly dataService: DataService, 
+    private readonly router: Router, 
+    private readonly store: Store<AuthState>) {}
 
   @Input() title!: string;
   @Input() description!: string;
@@ -21,30 +27,25 @@ export class CoursesCardComponent {
   @Input() rating!: number;
 
   ngOnInit(): void {
-    const user = localStorage.getItem('user');
-    this.isLoggedIn = !!user;
-    const storedUser = localStorage.getItem('user');
-    if (storedUser) {
-      this.user = JSON.parse(storedUser);
-    }
+    this.store.select(selectIsLoggedIn).subscribe(isLoggedIn => { 
+      this.isLoggedIn = isLoggedIn; 
+    }); 
+    
+    this.store.select(selectUser).subscribe(user => { 
+      this.user = user; 
+    });
   }
 
   sendData() {
     if (this.user) {
-      this.user.enrolledCourses.push(this.title);
-      console.log(this.user);
-      this.dataService.putItem(this.user.id, this.user).subscribe(
-        (response: UserData) => {
-          console.log('Course added successfully.', response);
-          alert('Course added successfully.');
-        },
-        (error: any) => {
-          console.error('Error in enrolling:', error);
-          alert('An error occurred. Please try again.');
-        }
-      );
+      const userClone = { ...this.user, enrolledCourses: [...this.user.enrolledCourses] };
+      userClone.enrolledCourses.push(this.title);
+  
+      console.log(userClone);
+      this.store.dispatch(updateUser({ user: userClone }));
     } else {
       alert('User is not logged in.');
     }
   }
+  
 }

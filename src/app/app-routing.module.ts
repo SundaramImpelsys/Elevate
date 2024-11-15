@@ -13,6 +13,7 @@ import { PharmacistCoursesComponent } from './pages/pharmacist-courses/pharmacis
 import { NutrionistCourseComponent } from './pages/nutrionist-course/nutrionist-course.component';
 import { DoctorCoursesComponent } from './pages/doctor-courses/doctor-courses.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -24,7 +25,7 @@ const routes: Routes = [
   { path:'review', component: ReviewComponent},
   { path:'forgotPassword', component: ForgotPasswordComponent},
   { path:'nursingCourse', component: NursingCourseComponent},
-  { path:'dashboard', component: DashboardComponent},
+  { path:'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
   { path:'pharmacistCourses', component: PharmacistCoursesComponent},
   { path:'nutrionistCourses', component: NutrionistCourseComponent},
   { path:'doctorCourses', component: DoctorCoursesComponent}

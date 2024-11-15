@@ -3,6 +3,10 @@ import { Router } from '@angular/router';
 import { DataService } from 'src/app/services/data.service';
 import { UserData } from '../../interfaces/user.data'; 
 
+import { Store } from '@ngrx/store'; 
+import { selectIsLoggedIn, selectUser } from '../../store/selectors/userVerification.selectors'; 
+import { AuthState } from '../../store/reducers/userVerification.reducers';
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -10,14 +14,20 @@ import { UserData } from '../../interfaces/user.data';
 })
 export class DashboardComponent implements OnInit {
   user: UserData | null = null;
+  isLoggedIn: boolean = false;
 
-  constructor(private readonly router: Router, private readonly dataService: DataService) {}
+  constructor(private readonly router: Router, 
+    private readonly dataService: DataService, 
+    private readonly store: Store<AuthState>) {}
 
   ngOnInit(): void {
-    const storedUser = localStorage.getItem('user');
-    if (storedUser) {
-      this.user = JSON.parse(storedUser);
-    } 
+    this.store.select(selectIsLoggedIn).subscribe(isLoggedIn => { 
+      this.isLoggedIn = isLoggedIn; 
+    }); 
+    
+    this.store.select(selectUser).subscribe(user => { 
+      this.user = user; 
+    });
   }
 
   deleteAccount(): void {
