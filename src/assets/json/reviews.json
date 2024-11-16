@@ -1,11 +1,24 @@
+
+
 [
     {
-        "imageSrc": "assets/review/1.png"
+        "imageSrc": "assets/review/1.png",
+        "name": "Silva Juliana ",
+        "description": "Elevate is a game-changer for doctors, offering an extensive array of courses and workshops designed to enhance medical expertise. The platform features top-tier instructors and up-to-date material, making it an essential tool for continuous professional development."
     },
     {
-        "imageSrc": "assets/review/2.png"
+        "imageSrc": "assets/review/2.png",
+        "name": "John Doe",
+        "description": "Elevate has been instrumental in my career transition as a doctor. The platform offers a diverse range of courses and workshops, making it easy to find the right content for my specific needs. I highly recommend it to anyone looking to improve their medical skills."
     },
     {
-        "imageSrc": "assets/review/3.png"
+        "imageSrc": "assets/review/3.png",
+        "name": "Emily Johnson",
+        "description": "I have been using Elevate for the past five years. The courses and workshops offered by the platform have been invaluable in my medical education. I am grateful for the support and guidance I have received from the instructors and the platform as a whole."
+    },
+    {
+        "imageSrc": "assets/review/4.png",
+        "name": "Sarah Thompson",
+        "description": "Elevate has been a game-changer for me as a doctor. The courses and workshops offered by the platform have been a valuable resource for my medical education. I am grateful for the support and guidance I have received from the instructors and the platform as a whole."
     }
 ]

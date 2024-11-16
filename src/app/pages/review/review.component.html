@@ -1,13 +1,15 @@
 <app-navbar></app-navbar>
-<h1 class="text-center">Our Valuable Customers</h1>
+<h1 class="text-center" style="margin: 20px;">Our Valuable Customers</h1>
 <div id="reviewCarousel" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
     <button *ngFor="let review of reviewData; index as i" type="button" [attr.data-bs-target]="'#reviewCarousel'" [attr.data-bs-slide-to]="i" [class.active]="i === 0" [attr.aria-label]="'Slide ' + (i + 1)"></button>
   </div>
-  <div class="carousel-inner">
-    <div *ngFor="let review of reviewData; index as i" [class.active]="i === 0" class="carousel-item">
-      <img [src]="review.imageSrc" class="d-block w-100" alt="Review {{ i + 1 }}">
-      <div class="carousel-caption d-none d-md-block">
+  <div class="carousel-inner" style="background-image: url('{{backgroundImageReview}}'); background-size: cover;  background-position: center;">
+    <div *ngFor="let review of reviewData; index as i" class="carousel-item" [ngClass]="{ 'active': i === 0 }">
+      <div class="carousel-content">
+        <img [src]="review.imageSrc" class="review-image" alt="Review {{ i + 1 }}">
+        <h5 class="review-name">{{ review.name }}</h5>
+        <p class="review-description">{{ review.description }}</p>
       </div>
     </div>
   </div>
@@ -20,3 +22,4 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
+<app-footer></app-footer>

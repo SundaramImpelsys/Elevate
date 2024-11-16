@@ -14,6 +14,10 @@ export class NursingCourseComponent implements OnInit {
 
   selectedTrainer: string = '';
   selectedRating: number | null = null;
+  searchQuery: string = '';
+
+  currentPage: number = 1;
+  itemsPerPage: number = 6;
 
   constructor(private readonly nurseCourseService: NurseCourseService) {}
 
@@ -40,7 +44,31 @@ export class NursingCourseComponent implements OnInit {
     this.filteredCourses = this.courses.filter((course: any) => {
       const trainerMatch = this.selectedTrainer ? course.trainerName === this.selectedTrainer : true;
       const ratingMatch = this.selectedRating !== null ? course.rating === Number(this.selectedRating) : true;
-      return trainerMatch && ratingMatch;
+      const searchMatch = course.title.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
+                          course.description.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
+                          course.trainerName.toLowerCase().includes(this.searchQuery.toLowerCase());
+      return trainerMatch && ratingMatch && searchMatch;
     });
+    this.currentPage = 1; // Reset to the first page after filtering
+  }
+
+  onSearch(event: any): void {
+    this.searchQuery = event.target.value;
+    this.applyFilters();
+  }
+
+  get paginatedCourses(): any[] {
+    const start = (this.currentPage - 1) * this.itemsPerPage;
+    const end = start + this.itemsPerPage;
+    return this.filteredCourses.slice(start, end);
+  }
+
+  onPageChange(page: number): void {
+    this.currentPage = page;
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  get totalPages(): number[] {
+    return Array(Math.ceil(this.filteredCourses.length / this.itemsPerPage)).fill(0).map((x, i) => i + 1);
   }
 }

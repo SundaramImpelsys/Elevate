@@ -1,15 +1,18 @@
 <app-navbar></app-navbar>
 
 <div class="container">
-  <!-- Filters -->
-  <div class="row my-3">
-    <div class="col-md-6">
+  <!-- Search and Filters -->
+  <div class="row my-3 align-items-center">
+    <div class="col-md-4">
+      <input type="text" class="form-control" placeholder="Search courses..." (input)="onSearch($event)">
+    </div>
+    <div class="col-md-4">
       <select class="form-select" [(ngModel)]="selectedTrainer" (change)="applyFilters()">
         <option value="">All Trainers</option>
         <option *ngFor="let trainer of uniqueTrainers">{{ trainer }}</option>
       </select>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-4">
       <select class="form-select" [(ngModel)]="selectedRating" (change)="applyFilters()">
         <option value="">All Ratings</option>
         <option *ngFor="let rating of uniqueRatings">{{ rating }}</option>
@@ -19,7 +22,7 @@
 
   <!-- Course Cards -->
   <div class="row">
-    <div class="col-md-4 mb-4" *ngFor="let course of filteredCourses">
+    <div class="col-md-4 mb-4" *ngFor="let course of paginatedCourses">
       <app-courses-card 
         [title]="course.title"
         [description]="course.description"
@@ -28,4 +31,15 @@
       </app-courses-card>
     </div>
   </div>
+  
+  <!-- Pagination -->
+  <nav>
+    <ul class="pagination">
+      <li *ngFor="let page of totalPages" class="page-item" [ngClass]="{'active-page': currentPage === page}">
+        <a class="page-link" (click)="onPageChange(page)">{{ page }}</a>
+      </li>
+    </ul>
+  </nav>
 </div>
+
+<app-footer></app-footer>

@@ -3,13 +3,13 @@
       <h1 class="fade-in" style="animation: fadeInUp 1s ease-in-out;">Unlock Your Learning Potential</h1>
       <p class="fade-in" style="animation: fadeInUp 1.5s ease-in-out;">Create a profile to elevate your learning experience, connect with experts, attend workshops, and enroll in courses.</p>
       <div class="row mt-4">
-        <div class="col-md-4">
+        <div class="col-md-4" *ngIf="!loadingCourse">
           <app-intro-card  [number]="course" text="Courses"></app-intro-card>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4" *ngIf="!loadingWorkshop">
           <app-intro-card  [number]="workshops" text="Workshops"></app-intro-card>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4" *ngIf="!loadingTrainer">
           <app-intro-card  [number]="trainers" text="Trainers"></app-intro-card>
         </div>
       </div>

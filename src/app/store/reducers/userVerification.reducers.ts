@@ -14,7 +14,10 @@ export const initialState: AuthState = {
 
 export const authReducer = createReducer(
   initialState,
-  on(verifyUser, state => state),
+  on(verifyUser, state => {
+    const persistedState = localStorage.getItem('authState'); 
+    return persistedState ? JSON.parse(persistedState) : state;
+  }),
   on(login, (state, { user }) => ({
     ...state,
     isLoggedIn: true,

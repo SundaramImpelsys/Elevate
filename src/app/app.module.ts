@@ -27,7 +27,7 @@ import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { SigninComponent } from './pages/signin/signin.component';
 import { FormsModule } from '@angular/forms';
-import { TrainerService } from './services/trainer.service';
+import { CountService } from './services/count.service';
 import { AnnouncementsComponent } from './pages/announcements/announcements.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './components/footer/footer.component';
@@ -91,7 +91,7 @@ import { authReducer } from './store/reducers/userVerification.reducers';
     EffectsModule.forRoot([]),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() })
   ],
-  providers: [TrainerService ],
+  providers: [CountService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

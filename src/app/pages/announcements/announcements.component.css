@@ -48,9 +48,19 @@
     margin: 0;
   }
 
+  .no-results { 
+    color: #ff7518; 
+    font-size: 2rem; 
+    margin: 1.5rem;
+    margin-bottom: 100px;
+  }
+
   .page-link { 
     color: #194866; 
 }
+  .page-link:hover{
+    cursor: pointer;
+  }
   .active-page .page-link {
     background-color: #ff7518;
     color: white;

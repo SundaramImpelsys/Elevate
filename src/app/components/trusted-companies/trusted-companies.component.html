@@ -1,13 +1,15 @@
 <div class="trusted-companies text-center my-4">
-  <h2>Trusted by 500+ Companies</h2>
+  <h2>Trusted Partners</h2>
   <div class="scrolling-wrapper">
     <div class="scrolling-content" #scrollingContent>
-      <div *ngFor="let company of companies">
-        <app-card [imageSrc]="company.imageSrc" [title]="company.title" [description]="company.description"></app-card>
+      <div *ngFor="let company of companies" class="company-card">
+        <img [src]="company.imageSrc" alt="Company Logo" class="company-image">
+        <p class="company-title">{{ company.title }}</p>
       </div>
       <!-- Duplicate the companies for seamless effect -->
-      <div *ngFor="let company of companies">
-        <app-card [imageSrc]="company.imageSrc" [title]="company.title" [description]="company.description"></app-card>
+      <div *ngFor="let company of companies" class="company-card">
+        <img [src]="company.imageSrc" alt="Company Logo" class="company-image">
+        <p class="company-title">{{ company.title }}</p>
       </div>
     </div>
   </div>

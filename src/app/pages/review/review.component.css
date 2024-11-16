@@ -1,23 +1,66 @@
-h1{
-    margin: 3% 0;
-    color: #194866;
-    font-weight: 6rem;
-}
-.carousel{
-    margin: 0 3%;
+.carousel-inner {
+  position: relative;
+  height: 500px; /* Adjust height as needed */
 }
 
-.carousel-item img {
-    max-height: 440px;
-    object-fit: cover;
-    border-radius: 30px;
+.carousel-item {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.6s ease-in-out;
+}
+
+.carousel-item.active {
+  display: flex;
+}
+
+.carousel-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 50%; /* Center 50% of the carousel */
+  background: #ff7518; /* Add a translucent background for better readability */
+  padding: 2rem;
+  border-radius: 10px;
+  height: auto;
+  margin: 10px 0;
+}
+
+.review-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.review-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.review-description {
+  font-size: 1rem;
+  color: white;
+}
+
+.carousel-indicators {
+  bottom: -10px;
+}
+
+.carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 786px) {
+  .carousel-content {
+    width: 75%;
   }
-  
-  .carousel-caption {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 1rem;
-    border-radius: 0.5rem;
-    width: auto;
-    margin-top: 10px;
-  }
-  
+}
+

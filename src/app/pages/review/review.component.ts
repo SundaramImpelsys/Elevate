@@ -11,6 +11,7 @@ export class ReviewComponent {
   constructor(private readonly reviewService:ReviewService){}
 
   reviewData: any = [];
+  backgroundImageReview: string = 'assets/review/backgroundImageReview.png';
 
   ngOnInit(): void {
     this.reviewService.getReview().subscribe((data) => {

@@ -17,20 +17,41 @@
 
 @keyframes scroll {
   0% {
-      transform: translateX(0);
+    transform: translateX(0);
   }
   100% {
-      transform: translateX(-50%); 
+    transform: translateX(-50%); 
   }
 }
 
-.card {
+.company-card {
   margin: 0 1rem;
   width: 150px;
-  box-shadow: 0 4px 10px rgba(25, 72, 102, 0.9); 
+  text-align: center;
+  background-color: #194866;
+  color:white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(25, 72, 102, 0.9);
+  
+}
+
+.company-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.company-title {
+  font-size: 1rem;
+  margin: 10px;
 }
 
 h2 {
   font-size: 3rem;
+  margin: 2px;
   margin-bottom: 1rem;
+}
+
+.scrolling-wrapper:hover .scrolling-content {
+  animation-play-state: paused;
 }

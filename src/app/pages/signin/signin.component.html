@@ -15,9 +15,10 @@
               <div *ngIf="step === 1">
                 <div class="mb-3">
                   <label for="name" class="form-label">Name</label>
-                  <input type="text" class="form-control" id="name" placeholder="Name" required [(ngModel)]="registrationData.name" name="name" #nameModel="ngModel">
+                  <input type="text" class="form-control" id="name" placeholder="Name" required [(ngModel)]="registrationData.name" name="name" #nameModel="ngModel" pattern="[A-Za-z]+">
                   <div *ngIf="nameModel.invalid && nameModel.touched" class="text-danger small">
                     <div *ngIf="nameModel.errors?.['required']">Name is required.</div>
+                    <div *ngIf="nameModel.errors?.['pattern']">Only characters allowded.</div>
                   </div>
                 </div>
                 <div class="mb-3">

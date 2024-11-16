@@ -12,6 +12,10 @@
   .nav-item {
     margin-right: 20px;
   }
+
+  .nav-item.dropdown:hover .dropdown-menu { 
+    display: block; 
+  }
   
   .nav-link,
   .dropdown-item {

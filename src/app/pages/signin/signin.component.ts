@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { TrainerService } from '../../services/trainer.service';
+import { CountService } from '../../services/count.service';
 import { DataService } from 'src/app/services/data.service';
 import { UserData } from 'src/app/interfaces/user.data';
 
@@ -27,7 +27,7 @@ export class SigninComponent {
   step: number = 1; 
   emailExists: boolean = false;
 
-  constructor(private readonly trainerService: TrainerService, private readonly router: Router, private readonly dataService: DataService) {}
+  constructor(private readonly countService: CountService, private readonly router: Router, private readonly dataService: DataService) {}
 
   emailExist(): void {
     this.dataService.getItems().subscribe((items: UserData[]) => {
@@ -52,7 +52,7 @@ export class SigninComponent {
 
       if (this.isStep3Valid()) {  
         if (this.registrationData.role === 'trainer') { 
-          this.trainerService.incrementTrainerCount(); 
+          this.countService.incrementTrainerCount(); 
           this.router.navigate(['']); 
         } 
         else { 

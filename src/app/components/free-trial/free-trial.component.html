@@ -4,18 +4,19 @@
   <p>Learn from world-class experts. Provide Your Details we will get back to you!</p>
   <form [formGroup]="freeTrialForm" (ngSubmit)="onSubmit()" class="row g-3">
     <div class="col-md-3">
-      <input type="text" class="form-control" formControlName="name" placeholder="Name">
+      <input type="text" class="form-control" formControlName="name" placeholder="Name" pattern="[A-Za-z]+">
       <small *ngIf="freeTrialForm.get('name')?.invalid && (freeTrialForm.get('name')?.dirty || freeTrialForm.get('name')?.touched)" 
              class="text-white error-message" style="text-align: left; display: block;">
         <span *ngIf="freeTrialForm.get('name')?.errors?.['required']">Name is required.</span>
+        <span *ngIf="freeTrialForm.get('name')?.errors?.['pattern']">Only characters allowded.</span>
       </small>
     </div>
     <div class="col-md-3">
-      <input type="text" class="form-control" formControlName="mobileNumber" placeholder="Mobile No">
+      <input type="number" class="form-control" formControlName="mobileNumber" placeholder="Mobile No">
       <small *ngIf="freeTrialForm.get('mobileNumber')?.invalid && freeTrialForm.get('mobileNumber')?.touched" 
              class="text-white error-message" style="text-align: left; display: block;">
         <span *ngIf="freeTrialForm.get('mobileNumber')?.errors?.['required']">Mobile number is required.</span>
-        <span *ngIf="freeTrialForm.get('mobileNumber')?.errors?.['pattern']">Enter a valid mobile number (at least 10 digits).</span>
+        <span *ngIf="freeTrialForm.get('mobileNumber')?.errors?.['pattern']">Enter at least 10 digits.</span>
       </small>
     </div>
     <div class="col-md-3">

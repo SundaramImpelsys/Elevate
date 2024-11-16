@@ -33,6 +33,7 @@ export class LoginComponent {
         const user = items.find(item => item.email === this.email && item.password === this.password);
         if (user) {
           console.log('Login successful:', user);
+          localStorage.setItem('authState', JSON.stringify({ user, isLoggedIn: true }));
           this.store.dispatch(login({ user }));
           this.router.navigate(['dashboard']); 
         } else {
