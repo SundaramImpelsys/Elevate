@@ -1,39 +1,44 @@
 [
-    {
-      "title": "Fundamentals of Nursing",
-      "description": "Learn the basics of nursing care, including patient assessment and vital signs monitoring.",
-      "trainerName": "Alice Johnson",
-      "rating": 5
-    },
-    {
-      "title": "Advanced Patient Care",
-      "description": "Advanced techniques in patient care, including wound management and intravenous therapy.",
-      "trainerName": "Alice Johnson",
-      "rating": 3
-    },
-    {
-      "title": "Nursing Leadership",
-      "description": "Develop leadership skills for managing nursing teams and improving patient outcomes.",
-      "trainerName": "Alice Johnson",
-      "rating": 4
-    },
-    {
-      "title": "Pediatric Nursing",
-      "description": "Specialized care techniques for pediatric patients.",
-      "trainerName": "Bob Smith",
-      "rating": 4
-    },
-    {
-      "title": "Geriatric Nursing",
-      "description": "Comprehensive care for elderly patients, including chronic disease management.",
-      "trainerName": "Bob Smith",
-      "rating": 4
-    },
-    {
-      "title": "Emergency Nursing",
-      "description": "Critical care techniques for emergency situations.",
-      "trainerName": "Carol White",
-      "rating": 4
-    }
-  ]
-  
+  {
+    "title": "Fundamentals of Nursing",
+    "description": "Learn the basics of nursing care, including patient assessment and vital signs monitoring.",
+    "trainerName": "Alice Johnson",
+    "courseContent": "Fundamentals of Nursing covers the essential skills and knowledge required for basic nursing care. Topics include patient assessment techniques, vital signs monitoring, hygiene and infection control, basic patient care procedures, and communication skills. The course provides a strong foundation in nursing principles, preparing students for hands-on clinical practice. Practical exercises and simulations are included to reinforce learning.",
+    "rating": 5
+  },
+  {
+    "title": "Advanced Patient Care",
+    "description": "Advanced techniques in patient care, including wound management and intravenous therapy.",
+    "trainerName": "Alice Johnson",
+    "courseContent": "Advanced Patient Care delves into specialized nursing techniques for managing complex patient needs. The course covers advanced wound care, intravenous (IV) therapy, catheterization, and other procedures that require specialized skills. Emphasis is placed on critical thinking, clinical judgment, and evidence-based practices to improve patient outcomes. Case studies and practical demonstrations help students apply their knowledge in real-world scenarios.",
+    "rating": 3
+  },
+  {
+    "title": "Nursing Leadership",
+    "description": "Develop leadership skills for managing nursing teams and improving patient outcomes.",
+    "trainerName": "Alice Johnson",
+    "courseContent": "Nursing Leadership focuses on developing the skills required to lead and manage nursing teams effectively. The course covers leadership theories, team dynamics, conflict resolution, decision-making, and strategies for improving patient care and organizational outcomes. Students learn to implement evidence-based practices, mentor junior staff, and navigate the challenges of healthcare management. Leadership exercises and role-playing scenarios are included to build confidence and competence.",
+    "rating": 4
+  },
+  {
+    "title": "Pediatric Nursing",
+    "description": "Specialized care techniques for pediatric patients.",
+    "trainerName": "Bob Smith",
+    "courseContent": "Pediatric Nursing provides specialized knowledge and skills for caring for children from infancy through adolescence. Topics include growth and development, common pediatric conditions, immunizations, and family-centered care. The course emphasizes communication with children and their families, pain management, and the unique physiological and psychological needs of pediatric patients. Clinical case studies and practical activities help students gain confidence in pediatric care.",
+    "rating": 4
+  },
+  {
+    "title": "Geriatric Nursing",
+    "description": "Comprehensive care for elderly patients, including chronic disease management.",
+    "trainerName": "Bob Smith",
+    "courseContent": "Geriatric Nursing covers the comprehensive care of elderly patients, focusing on the management of chronic diseases, promoting independence, and enhancing quality of life. The course addresses common geriatric syndromes, medication management, palliative care, and end-of-life issues. Students learn to perform thorough geriatric assessments and develop individualized care plans. The course includes discussions on ethical and legal considerations in geriatric care.",
+    "rating": 4
+  },
+  {
+    "title": "Emergency Nursing",
+    "description": "Critical care techniques for emergency situations.",
+    "trainerName": "Carol White",
+    "courseContent": "Emergency Nursing prepares students to provide rapid and effective care in emergency situations. The course covers triage, trauma care, cardiac emergencies, respiratory emergencies, and disaster response. Emphasis is placed on quick decision-making, teamwork, and advanced life support techniques. Practical simulations and drills help students develop the skills and confidence needed to handle high-pressure emergency scenarios.",
+    "rating": 4
+  }
+]

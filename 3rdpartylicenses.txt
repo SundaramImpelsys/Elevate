@@ -272,6 +272,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
+highcharts
+https://www.highcharts.com/license
+
 rxjs
 Apache-2.0
                                Apache License

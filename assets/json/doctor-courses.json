@@ -1,39 +1,44 @@
 [
-    {
-      "title": "Clinical Medicine",
-      "description": "Comprehensive review of clinical medicine principles.",
-      "trainerName": "John Anderson",
-      "rating": 4.7
-    },
-    {
-      "title": "Advanced Diagnostics",
-      "description": "Advanced diagnostic techniques for various medical conditions.",
-      "trainerName": "John Anderson",
-      "rating": 4.8
-    },
-    {
-      "title": "Surgical Techniques",
-      "description": "Advanced surgical skills and procedures.",
-      "trainerName": "John Anderson",
-      "rating": 4.9
-    },
-    {
-      "title": "Pediatric Medicine",
-      "description": "Specialized care for pediatric patients.",
-      "trainerName": "Karen Davis",
-      "rating": 4.7
-    },
-    {
-      "title": "Geriatric Medicine",
-      "description": "Comprehensive care for elderly patients.",
-      "trainerName": "Karen Davis",
-      "rating": 4.7
-    },
-    {
-      "title": "Emergency Medicine",
-      "description": "Critical care techniques for emergency situations.",
-      "trainerName": "Linda Wilson",
-      "rating": 4.9
-    }
-  ]
-  
+  {
+    "title": "Clinical Medicine",
+    "description": "Comprehensive review of clinical medicine principles.",
+    "trainerName": "John Anderson",
+    "courseContent": "Clinical Medicine offers a comprehensive review of the principles of clinical medicine. The course covers the diagnosis and treatment of common diseases, patient history taking, physical examination techniques, and the use of diagnostic tools. It emphasizes the importance of evidence-based practice and includes case studies to illustrate the application of clinical guidelines in real-world scenarios. Students learn to integrate clinical findings with laboratory results and imaging studies to make accurate diagnoses and develop effective treatment plans.",
+    "rating": 4.7
+  },
+  {
+    "title": "Advanced Diagnostics",
+    "description": "Advanced diagnostic techniques for various medical conditions.",
+    "trainerName": "John Anderson",
+    "courseContent": "Advanced Diagnostics provides in-depth knowledge of advanced diagnostic techniques used in the evaluation of various medical conditions. The course covers imaging modalities such as MRI, CT scans, and ultrasound, as well as laboratory tests and their interpretation. Emphasis is placed on selecting appropriate diagnostic tests based on clinical presentation, understanding the limitations and indications of different diagnostic tools, and integrating diagnostic data to formulate differential diagnoses. Practical sessions and case studies enhance the application of theoretical knowledge.",
+    "rating": 4.8
+  },
+  {
+    "title": "Surgical Techniques",
+    "description": "Advanced surgical skills and procedures.",
+    "trainerName": "John Anderson",
+    "courseContent": "Surgical Techniques focuses on developing advanced surgical skills and procedures. The course covers preoperative assessment, surgical anatomy, surgical techniques for various types of surgeries, and postoperative care. Topics include minimally invasive surgery, suturing techniques, wound management, and the use of surgical instruments. Hands-on workshops and simulations provide practical experience, allowing students to develop proficiency and confidence in performing surgical procedures. The course also addresses the principles of surgical asepsis and patient safety.",
+    "rating": 4.9
+  },
+  {
+    "title": "Pediatric Medicine",
+    "description": "Specialized care for pediatric patients.",
+    "trainerName": "Karen Davis",
+    "courseContent": "Pediatric Medicine focuses on the specialized care of pediatric patients from infancy through adolescence. The course covers growth and development, common pediatric illnesses, immunizations, and pediatric emergency care. Emphasis is placed on family-centered care, communication with children and their families, and the unique physiological and psychological needs of pediatric patients. Clinical case studies and practical sessions help students gain confidence in managing pediatric patients and understanding the impact of developmental stages on health and illness.",
+    "rating": 4.7
+  },
+  {
+    "title": "Geriatric Medicine",
+    "description": "Comprehensive care for elderly patients.",
+    "trainerName": "Karen Davis",
+    "courseContent": "Geriatric Medicine provides comprehensive care strategies for elderly patients, focusing on the management of chronic diseases, functional assessments, and the promotion of healthy aging. The course covers geriatric syndromes such as dementia, frailty, and falls, as well as palliative care and end-of-life issues. Students learn to perform geriatric assessments, develop individualized care plans, and address the complex medical and psychosocial needs of older adults. The course includes discussions on ethical and legal considerations in geriatric care, as well as the role of interdisciplinary teams.",
+    "rating": 4.7
+  },
+  {
+    "title": "Emergency Medicine",
+    "description": "Critical care techniques for emergency situations.",
+    "trainerName": "Linda Wilson",
+    "courseContent": "Emergency Medicine equips students with the knowledge and skills needed to manage critical and emergency situations. The course covers triage, resuscitation, trauma care, cardiac and respiratory emergencies, and disaster response. Emphasis is placed on rapid assessment, decision-making, and advanced life support techniques. Students participate in simulations and drills to develop the ability to respond effectively to high-pressure situations. The course also addresses the psychological aspects of emergency care and the importance of teamwork in the emergency department.",
+    "rating": 4.9
+  }
+]

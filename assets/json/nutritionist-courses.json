@@ -1,39 +1,44 @@
 [
-    {
-      "title": "Nutrition Fundamentals",
-      "description": "Basic principles of nutrition and diet planning.",
-      "trainerName": "Grace Williams",
-      "rating": 4.6
-    },
-    {
-      "title": "Advanced Nutrition Therapy",
-      "description": "Therapeutic nutrition interventions for various health conditions.",
-      "trainerName": "Grace Williams",
-      "rating": 4.8
-    },
-    {
-      "title": "Sports Nutrition",
-      "description": "Optimizing nutrition for athletic performance.",
-      "trainerName": "Grace Williams",
-      "rating": 4.9
-    },
-    {
-      "title": "Public Health Nutrition",
-      "description": "Strategies for improving community health through nutrition.",
-      "trainerName": "Henry Brown",
-      "rating": 4.7
-    },
-    {
-      "title": "Pediatric Nutrition",
-      "description": "Nutritional needs and interventions for children.",
-      "trainerName": "Henry Brown",
-      "rating": 4.7
-    },
-    {
-      "title": "Weight Management",
-      "description": "Effective strategies for weight loss and maintenance.",
-      "trainerName": "Isabel Martinez",
-      "rating": 4.9
-    }
-  ]
-  
+  {
+    "title": "Nutrition Fundamentals",
+    "description": "Basic principles of nutrition and diet planning.",
+    "trainerName": "Grace Williams",
+    "courseContent": "Nutrition Fundamentals covers the basic principles of nutrition, including the role of macronutrients and micronutrients in the body, the dietary guidelines for different populations, and the methods for planning balanced diets. The course provides foundational knowledge on how food affects health and well-being, the importance of hydration, and the impact of lifestyle factors on nutritional status. It also includes practical tips for creating healthy meal plans and understanding food labels.",
+    "rating": 4.6
+  },
+  {
+    "title": "Advanced Nutrition Therapy",
+    "description": "Therapeutic nutrition interventions for various health conditions.",
+    "trainerName": "Grace Williams",
+    "courseContent": "Advanced Nutrition Therapy explores therapeutic nutrition interventions for managing and preventing various health conditions, such as diabetes, cardiovascular disease, and gastrointestinal disorders. The course covers the principles of medical nutrition therapy (MNT), individualized diet planning, and the role of nutrition in disease management. It includes case studies and evidence-based guidelines to illustrate the application of nutrition therapy in clinical practice, emphasizing the importance of interdisciplinary collaboration in patient care.",
+    "rating": 4.8
+  },
+  {
+    "title": "Sports Nutrition",
+    "description": "Optimizing nutrition for athletic performance.",
+    "trainerName": "Grace Williams",
+    "courseContent": "Sports Nutrition focuses on optimizing nutrition for athletic performance and recovery. The course covers the nutritional requirements for different types of athletes, the timing and composition of meals and snacks, and the use of supplements. It provides guidelines for hydration, energy balance, and nutrient periodization to enhance performance and support recovery. Practical strategies for fueling before, during, and after exercise are discussed, along with the impact of nutrition on immune function and injury prevention.",
+    "rating": 4.9
+  },
+  {
+    "title": "Public Health Nutrition",
+    "description": "Strategies for improving community health through nutrition.",
+    "trainerName": "Henry Brown",
+    "courseContent": "Public Health Nutrition addresses strategies for improving community health through nutrition interventions and policies. The course covers the assessment of nutritional status at the population level, the design and implementation of nutrition programs, and the evaluation of public health nutrition initiatives. Topics include food security, nutrition education, and the role of government and non-governmental organizations in promoting healthy eating habits. The course also examines the social determinants of health and their impact on nutritional outcomes.",
+    "rating": 4.7
+  },
+  {
+    "title": "Pediatric Nutrition",
+    "description": "Nutritional needs and interventions for children.",
+    "trainerName": "Henry Brown",
+    "courseContent": "Pediatric Nutrition focuses on the nutritional needs and interventions for children from infancy through adolescence. The course covers growth and development, dietary guidelines for different age groups, and the prevention and management of common pediatric nutrition issues such as malnutrition, obesity, and food allergies. It includes practical advice for feeding infants and toddlers, the importance of breastfeeding, and strategies for promoting healthy eating habits in children. The role of nutrition in cognitive and physical development is also emphasized.",
+    "rating": 4.7
+  },
+  {
+    "title": "Weight Management",
+    "description": "Effective strategies for weight loss and maintenance.",
+    "trainerName": "Isabel Martinez",
+    "courseContent": "Weight Management provides effective strategies for weight loss and maintenance, focusing on a holistic approach that includes diet, physical activity, and behavioral changes. The course covers the principles of energy balance, the role of macronutrients in weight management, and the impact of metabolic rate on weight loss. It includes practical tips for meal planning, portion control, and developing sustainable eating habits. Behavioral techniques for managing emotional eating and promoting long-term adherence to a healthy lifestyle are also discussed.",
+    "rating": 4.9
+  }
+]
