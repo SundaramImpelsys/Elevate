@@ -13,6 +13,9 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatDialogModule } from '@angular/material/dialog'; 
+import { MatButtonModule } from '@angular/material/button';
 
 
 @NgModule({
@@ -32,7 +35,9 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     MatInputModule,
     MatSelectModule,
     MatSidenavModule,
-
+    MatCheckboxModule,
+    MatDialogModule,
+    MatButtonModule
   ],
   exports: [
     BrowserAnimationsModule,
@@ -44,7 +49,10 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     MatIconModule,
     MatBottomSheetModule,
     MatListModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatCheckboxModule,
+    MatDialogModule,
+    MatButtonModule
   ]
 })
 export class MaterialModule { }

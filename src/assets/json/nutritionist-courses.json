@@ -1,39 +1,56 @@
 [
-    {
-      "title": "Nutrition Fundamentals",
-      "description": "Basic principles of nutrition and diet planning.",
-      "trainerName": "Grace Williams",
-      "rating": 4.6
-    },
-    {
-      "title": "Advanced Nutrition Therapy",
-      "description": "Therapeutic nutrition interventions for various health conditions.",
-      "trainerName": "Grace Williams",
-      "rating": 4.8
-    },
-    {
-      "title": "Sports Nutrition",
-      "description": "Optimizing nutrition for athletic performance.",
-      "trainerName": "Grace Williams",
-      "rating": 4.9
-    },
-    {
-      "title": "Public Health Nutrition",
-      "description": "Strategies for improving community health through nutrition.",
-      "trainerName": "Henry Brown",
-      "rating": 4.7
-    },
-    {
-      "title": "Pediatric Nutrition",
-      "description": "Nutritional needs and interventions for children.",
-      "trainerName": "Henry Brown",
-      "rating": 4.7
-    },
-    {
-      "title": "Weight Management",
-      "description": "Effective strategies for weight loss and maintenance.",
-      "trainerName": "Isabel Martinez",
-      "rating": 4.9
-    }
-  ]
-  
+  {
+    "title": "Nutrition Fundamentals",
+    "description": "Basic principles of nutrition and diet planning.",
+    "trainerName": "Grace Williams",
+    "courseIntroduction": "Nutrition fundamentals are the basis of understanding how food affects our health. This course covers macronutrients (carbohydrates, proteins, fats) and micronutrients (vitamins, minerals) and their role in bodily functions. It also explores methods of diet planning, the importance of hydration, and the impact of lifestyle factors such as exercise and sleep on nutritional status.",
+    "courseKeyConcepts": "Macronutrients: Essential nutrients that provide energy and support bodily functions; Micronutrients: Vitamins and minerals required for various metabolic processes; Hydration: The importance of adequate fluid intake for health; Diet Planning: Strategies for creating balanced meals and managing nutritional needs across different populations.",
+    "courseConclusion": "A solid understanding of nutrition is essential for promoting health and preventing disease. This course equips students with the knowledge to create balanced meal plans and make informed dietary decisions.",
+    "rating": 4.6
+  },
+  {
+    "title": "Advanced Nutrition Therapy",
+    "description": "Therapeutic nutrition interventions for various health conditions.",
+    "trainerName": "Grace Williams",
+    "courseIntroduction": "Advanced Nutrition Therapy focuses on the therapeutic use of nutrition in the treatment and prevention of chronic diseases. The course provides in-depth knowledge of medical nutrition therapy (MNT), which includes tailored diet plans for conditions such as diabetes, cardiovascular disease, and gastrointestinal disorders.",
+    "courseKeyConcepts": "Medical Nutrition Therapy: Tailoring nutrition plans to treat specific health conditions; Disease Management: Understanding the role of nutrition in managing diseases; Interdisciplinary Collaboration: Working with other healthcare professionals to optimize patient outcomes.",
+    "courseConclusion": "Nutrition therapy is a key component of patient care. By understanding advanced nutrition principles, healthcare providers can improve the management and prevention of chronic health conditions.",
+    "rating": 4.8
+  },
+  {
+    "title": "Sports Nutrition",
+    "description": "Optimizing nutrition for athletic performance.",
+    "trainerName": "Grace Williams",
+    "courseIntroduction": "Sports Nutrition is designed to help athletes understand the nutritional strategies needed for peak performance and recovery. This course focuses on the energy needs of athletes, the role of timing and composition of meals, and how supplements can enhance performance.",
+    "courseKeyConcepts": "Energy Balance: Understanding the relationship between calories consumed and burned for performance; Meal Timing: Optimizing nutrient intake around training sessions; Hydration: Maintaining proper fluid balance for optimal performance; Supplements: The role of supplements in enhancing athletic performance.",
+    "courseConclusion": "By applying sports nutrition principles, athletes can enhance their performance, recover more effectively, and reduce the risk of injury.",
+    "rating": 4.9
+  },
+  {
+    "title": "Public Health Nutrition",
+    "description": "Strategies for improving community health through nutrition.",
+    "trainerName": "Henry Brown",
+    "courseIntroduction": "Public Health Nutrition examines how nutrition can be used to improve the health of entire communities. This course discusses the importance of assessing nutritional status at the population level and designing nutrition programs to address public health issues.",
+    "courseKeyConcepts": "Nutritional Status Assessment: Evaluating the dietary needs of populations; Nutrition Programs: Designing and implementing community-wide interventions; Food Security: Ensuring access to healthy food in underserved communities; Social Determinants: Understanding the impact of socioeconomic factors on nutrition.",
+    "courseConclusion": "Public health nutrition is key to improving population health. By developing nutrition interventions and policies, public health professionals can make a significant impact on community well-being.",
+    "rating": 4.7
+  },
+  {
+    "title": "Pediatric Nutrition",
+    "description": "Nutritional needs and interventions for children.",
+    "trainerName": "Henry Brown",
+    "courseIntroduction": "Pediatric Nutrition focuses on the unique nutritional needs of children, from infancy to adolescence. This course provides a thorough understanding of how nutrition influences growth, development, and overall health in children.",
+    "courseKeyConcepts": "Growth and Development: Understanding how nutrition supports physical and cognitive growth; Dietary Guidelines: Age-specific nutritional recommendations; Common Pediatric Nutrition Issues: Addressing challenges such as obesity, malnutrition, and food allergies; Healthy Eating Habits: Strategies for promoting lifelong healthy eating behaviors.",
+    "courseConclusion": "Proper nutrition is crucial for children's growth and development. This course provides the knowledge to address common nutritional issues and promote healthy eating habits in children.",
+    "rating": 4.7
+  },
+  {
+    "title": "Weight Management",
+    "description": "Effective strategies for weight loss and maintenance.",
+    "trainerName": "Isabel Martinez",
+    "courseIntroduction": "Weight Management focuses on practical strategies for achieving and maintaining a healthy weight. The course covers the science of energy balance, the role of macronutrients in weight regulation, and behavioral strategies for sustaining a healthy lifestyle.",
+    "courseKeyConcepts": "Energy Balance: The relationship between calories consumed and expended; Macronutrient Roles: Understanding the impact of proteins, fats, and carbohydrates on weight management; Meal Planning: Creating sustainable eating habits for weight loss and maintenance; Behavioral Strategies: Techniques for overcoming emotional eating and building healthy routines.",
+    "courseConclusion": "By integrating knowledge of nutrition and behavior change, this course helps individuals achieve and maintain a healthy weight for the long term.",
+    "rating": 4.9
+  }
+]

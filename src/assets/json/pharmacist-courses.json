@@ -1,39 +1,83 @@
 [
-    {
-      "title": "Pharmacology Basics",
-      "description": "Introduction to pharmacology and medication management.",
-      "trainerName": "David Lee",
-      "rating": 4.5
-    },
-    {
-      "title": "Clinical Pharmacy",
-      "description": "Advanced clinical pharmacy practices and patient care.",
-      "trainerName": "David Lee",
-      "rating": 4.7
-    },
-    {
-      "title": "Pharmaceutical Calculations",
-      "description": "Essential calculations for accurate medication dispensing.",
-      "trainerName": "David Lee",
-      "rating": 4.8
-    },
-    {
-      "title": "Pharmacy Management",
-      "description": "Managing a pharmacy practice, including staff and inventory.",
-      "trainerName": "Evelyn King",
-      "rating": 4.6
-    },
-    {
-      "title": "Drug Interactions",
-      "description": "Understanding and managing drug interactions.",
-      "trainerName": "Evelyn King",
-      "rating": 4.7
-    },
-    {
-      "title": "Compounding Medications",
-      "description": "Techniques for compounding customized medications.",
-      "trainerName": "Frank Harris",
-      "rating": 4.9
-    }
-  ]
-  
+  {
+    "title": "Clinical Pharmacy",
+    "description": "Advanced clinical pharmacy practices and patient care.",
+    "trainerName": "David Lee",
+    "courseIntroduction": "Clinical pharmacy focuses on applying pharmacy knowledge directly to patient care, emphasizing medication therapy management, collaboration with healthcare teams, and evidence-based practices.",
+    "courseKeyConcepts": "Medication Therapy Management (MTM): Strategies for optimizing therapeutic outcomes through tailored drug therapy; Patient Care Planning: Developing and assessing personalized care plans for medication management; Evidence-Based Practices: Using clinical data and research to guide treatment decisions; Collaborative Healthcare: Working with medical teams to ensure comprehensive patient care.",
+    "courseConclusion": "Clinical pharmacy provides practical strategies for improving patient outcomes through direct patient interaction and teamwork within the healthcare system.",
+    "rating": 4.7
+  },
+  {
+    "title": "Pharmaceutical Calculations",
+    "description": "Essential calculations for accurate medication dispensing.",
+    "trainerName": "David Lee",
+    "courseIntroduction": "Pharmaceutical calculations are essential for the safe and accurate preparation and dispensing of medications. This course emphasizes mathematical skills for dosage calculations, unit conversions, and concentration measurements.",
+    "courseKeyConcepts": "Dosage Calculations: Methods for determining correct drug doses; Concentration Measurements: Calculating drug concentrations for precise dispensing; Dilutions: Understanding how to dilute and concentrate solutions accurately; Unit Conversions: Converting between different measurement units commonly used in pharmacy practice.",
+    "courseConclusion": "Mastering pharmaceutical calculations ensures accuracy in medication dispensing, contributing to patient safety and treatment efficacy.",
+    "rating": 4.8
+  },
+  {
+    "title": "Pharmacy Management",
+    "description": "Managing a pharmacy practice, including staff and inventory.",
+    "trainerName": "Evelyn King",
+    "courseIntroduction": "This course covers key aspects of managing a pharmacy practice, including financial, human resource, and inventory management. It also addresses customer service and regulatory compliance, with a focus on operational efficiency.",
+    "courseKeyConcepts": "Financial Management: Budgeting, pricing, and financial oversight within pharmacy operations; Inventory Control: Managing stock and ensuring the availability of medications; Human Resource Management: Hiring, training, and retaining pharmacy staff; Regulatory Compliance: Understanding and adhering to laws and regulations in pharmacy practice.",
+    "courseConclusion": "Effective pharmacy management enhances operational efficiency, improves patient care, and ensures compliance with healthcare regulations.",
+    "rating": 4.6
+  },
+  {
+    "title": "Drug Interactions",
+    "description": "Understanding and managing drug interactions.",
+    "trainerName": "Evelyn King",
+    "courseIntroduction": "Drug interactions can alter the effects of medications, leading to adverse outcomes. This course educates students on identifying, managing, and preventing drug interactions.",
+    "courseKeyConcepts": "Pharmacokinetic Interactions: How drugs affect each other’s absorption, metabolism, and elimination; Pharmacodynamic Interactions: How drugs affect each other’s effects on the body; Adverse Effects: Potential harmful reactions from drug interactions; Preventing Interactions: Strategies to avoid harmful interactions through careful monitoring and patient education.",
+    "courseConclusion": "Recognizing and managing drug interactions is vital in clinical pharmacy practice to ensure patient safety and therapeutic success.",
+    "rating": 4.7
+  },
+  {
+    "title": "Compounding Medications",
+    "description": "Techniques for compounding customized medications.",
+    "trainerName": "Frank Harris",
+    "courseIntroduction": "Compounding medications involves preparing custom formulations based on patient needs. This course covers the techniques, safety measures, and legal considerations involved in creating compounded medications.",
+    "courseKeyConcepts": "Formulation Techniques: Methods for preparing custom medications and dosage forms; Mixing and Dispensing: Safe handling and dispensing of compounded drugs; Sterility and Safety: Ensuring compounded medications are safe, sterile, and effective; Patient-Centered Compounding: Tailoring medications to individual patient needs, including strengths, doses, and forms.",
+    "courseConclusion": "Compounding medications requires precision and safety, ensuring that patients receive treatments that meet their specific medical needs.",
+    "rating": 4.9
+  },
+  {
+    "title": "Pharmacy Importance",
+    "description": "Best practices for effective medication therapy management.",
+    "trainerName": "testing",
+    "courseIntroduction": "The course emphasizes the critical role pharmacists play in healthcare. It highlights their responsibility in medication dispensing, clinical services, and public health promotion.",
+    "courseKeyConcepts": "Medication Dispensing: Ensuring the safe and accurate provision of medications; Clinical Services: Providing services like counseling, medication therapy management, and health screenings; Public Health: Promoting community health initiatives and preventing disease through pharmacy practice.",
+    "courseConclusion": "Pharmacists are integral to the healthcare system, ensuring that medications are used safely and effectively, and contributing to the overall health of communities.",
+    "rating": 1
+  },
+  {
+    "title": "Patient Counseling Techniques",
+    "description": "Strategies for effective patient counseling and communication.",
+    "trainerName": "testing",
+    "courseIntroduction": "This course provides pharmacists with the skills to communicate effectively with patients, focusing on medication use, adherence, and managing side effects.",
+    "courseKeyConcepts": "Effective Communication: Building trust and understanding with patients; Medication Adherence: Techniques to encourage patients to follow their prescribed regimens; Side Effects Management: Educating patients on potential side effects and how to manage them; Cultural Competence: Adapting communication to meet the diverse needs of patients.",
+    "courseConclusion": "Effective counseling is essential to improve patient outcomes and ensure they understand how to safely and effectively use their medications.",
+    "rating": 1
+  },
+  {
+    "title": "Advanced Dosage Forms",
+    "description": "Understanding and formulating advanced pharmaceutical dosage forms.",
+    "trainerName": "testing",
+    "courseIntroduction": "This course explores advanced pharmaceutical dosage forms, including controlled-release systems, transdermal delivery, and other innovative drug delivery technologies.",
+    "courseKeyConcepts": "Controlled-Release Systems: Designing medications for gradual release over time; Transdermal Drug Delivery: Understanding how drugs are absorbed through the skin; Novel Drug Delivery Technologies: Exploring new technologies for more effective drug delivery.",
+    "courseConclusion": "Advanced dosage forms improve the efficacy, safety, and patient compliance of medications by optimizing how drugs are delivered and absorbed.",
+    "rating": 1
+  },
+  {
+    "title": "Clinical Pharmacy Practices",
+    "description": "Insights into clinical pharmacy and its role in patient care.",
+    "trainerName": "testing",
+    "courseIntroduction": "Clinical pharmacy practices focus on therapeutic drug monitoring, patient care plan development, and collaborative healthcare team involvement to improve patient care.",
+    "courseKeyConcepts": "Therapeutic Drug Monitoring: Monitoring drug levels to ensure effectiveness and safety; Patient Care Plans: Developing and assessing personalized care strategies; Multidisciplinary Teams: Collaborating with other healthcare professionals to provide comprehensive care.",
+    "courseConclusion": "Clinical pharmacy practices are critical for improving patient outcomes and ensuring effective medication therapy through collaboration and monitoring.",
+    "rating": 1
+  }
+]

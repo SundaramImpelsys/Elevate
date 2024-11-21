@@ -1,9 +1,46 @@
 <app-navbar></app-navbar>
 <div class="container">
-    <h1>Welcome, {{ user?.name }}!</h1>
-    <div *ngFor="let course of user?.enrolledCourses">
-        <p>{{course}}</p>
+  <div *ngIf="user?.role === 'learner'">
+    <h1><Strong>Hello, {{ user?.name }}! Welcome back</Strong></h1>
+    <h2>{{ user?.enrolledCourses?.length === 0 ? "You haven't enrolled any courses yet! Start learning!!" : "Your Enrolled Courses:" }}</h2>
+    <div *ngFor="let course of user?.enrolledCourses?.slice(0, 4)" class="course-card">
+      <div class="course-title">{{ course }}</div>
+      <div class="course-actions">
+        <button class="btn orangeButton" (click)="startLearning(course)">Start Learning</button>
+        <button class="btn blueButton" (click)="removeCourse(course)">Remove</button>
+      </div>
     </div>
-    <button class="btn btn-danger" (click)="deleteAccount()">Delete My Account</button>
+    <div *ngIf="viewAllCourse">
+      <div *ngFor="let course of user?.enrolledCourses?.slice(4)" class="course-card">
+        <div class="course-title">{{ course }}</div>
+        <div class="course-actions">
+          <button class="btn orangeButton" (click)="startLearning(course)">Start Learning</button>
+          <button class="btn blueButton" (click)="removeCourse(course)">Remove</button>
+        </div>
+      </div>
+    </div>
+    <button *ngIf="(user?.enrolledCourses?.length || 0) > 4" class="btn orangeButton" (click)="viewAllCoursesToggle()">
+      {{ viewAllCourse ? 'Hide Courses' : 'View All Courses' }}
+    </button>
+
+  </div>
+
+  <div *ngIf="user?.role === 'trainer'">
+    <h1>Welcome {{ user?.name }}, we are happy to have you!</h1>
+    <button class="btn orangeButton" routerLink="/createCourse">Create Course</button>
+    &nbsp;
+    <button class="btn orangeButton" (click)="openDeleteCoursesDialog()">Delete Courses</button>
+
+    <app-highcharts></app-highcharts>
+
   </div>
   
+  <div class="user-info">
+    <h2><strong>Your Information</strong></h2>
+    <p><strong>Name:</strong> {{ user?.name }}</p>
+    <p><strong>Email:</strong> {{ user?.email }}</p>
+    <p><strong>Role:</strong> {{ user?.role }}</p>
+    <button class="btn delete orangeButton" (click)="openDeleteDialog()">Delete My Account</button>
+  </div>
+</div>
+<app-footer></app-footer>

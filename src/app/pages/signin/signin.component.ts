@@ -3,6 +3,9 @@ import { Router } from '@angular/router';
 import { CountService } from '../../services/count.service';
 import { DataService } from 'src/app/services/data.service';
 import { UserData } from 'src/app/interfaces/user.data';
+import { Store } from '@ngrx/store';
+import { login } from '../../store/actions/userVerification.actions';
+import { AuthState } from '../../store/reducers/userVerification.reducers';
 
 @Component({
   selector: 'app-signin',
@@ -19,7 +22,8 @@ export class SigninComponent {
   experience:  null,
   password:  '',
   confirmPassword:  '',
-  enrolledCourses: []
+  enrolledCourses: [],
+  createdCourses: []
   }
   isPasswordVisible: boolean = false; 
   isConfrimPasswordVisible: boolean = false; 
@@ -27,7 +31,11 @@ export class SigninComponent {
   step: number = 1; 
   emailExists: boolean = false;
 
-  constructor(private readonly countService: CountService, private readonly router: Router, private readonly dataService: DataService) {}
+  constructor(
+    private readonly countService: CountService, 
+    private readonly router: Router, 
+    private readonly store: Store<AuthState>,
+    private readonly dataService: DataService) {}
 
   emailExist(): void {
     this.dataService.getItems().subscribe((items: UserData[]) => {
@@ -53,13 +61,15 @@ export class SigninComponent {
       if (this.isStep3Valid()) {  
         if (this.registrationData.role === 'trainer') { 
           this.countService.incrementTrainerCount(); 
-          this.router.navigate(['']); 
+
         } 
-        else { 
-          this.router.navigate(['login']); 
-        }
-        console.log(this.registrationData);
         delete this.registrationData.confirmPassword;
+        const user = this.registrationData;
+        console.log('signin successful:', user);
+        localStorage.setItem('authState', JSON.stringify({ user, isLoggedIn: true }));
+        this.store.dispatch(login({ user }));
+        this.router.navigate(['/dashboard']); 
+
 
         this.dataService.addItem(this.registrationData).subscribe(response => {
           console.log('Registration Data added:', response);

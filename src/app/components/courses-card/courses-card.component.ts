@@ -39,13 +39,20 @@ export class CoursesCardComponent {
   sendData() {
     if (this.user) {
       const userClone = { ...this.user, enrolledCourses: [...this.user.enrolledCourses] };
-      userClone.enrolledCourses.push(this.title);
-  
-      console.log(userClone);
+      if (userClone.enrolledCourses.includes(this.title)) {
+        alert('Course already exists.');
+        return;
+      }
+      userClone.enrolledCourses.unshift(this.title);
+      this.dataService.putItem(this.user.id, userClone).subscribe(() => {
+        alert('Course added successfully');
+      });
       this.store.dispatch(updateUser({ user: userClone }));
     } else {
-      alert('User is not logged in.');
+      alert('You need to have an account to enroll this course.');
+      this.router.navigate(['/signin']);
     }
   }
+  
   
 }

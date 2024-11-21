@@ -43,6 +43,12 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { authReducer } from './store/reducers/userVerification.reducers';
+import { CreateCourseComponent } from './components/create-course/create-course.component';
+import { HighchartsComponent } from './components/highcharts/highcharts.component';
+import { DeleteCoursesDialogComponent } from './components/delete-courses-dialog/delete-courses-dialog.component';
+import { CoursePageComponent } from './pages/course-page/course-page.component';
+import { DeleteConfirmationComponent } from './components/delete-confirmation/delete-confirmation.component';
+
 
 @NgModule({
   declarations: [
@@ -77,8 +83,13 @@ import { authReducer } from './store/reducers/userVerification.reducers';
     PharmacistCoursesComponent,
     DoctorCoursesComponent,
     DashboardComponent,
+    CreateCourseComponent,
+    HighchartsComponent,
+    DeleteCoursesDialogComponent,
+    CoursePageComponent,
+    DeleteConfirmationComponent,
   ],
-  imports: [
+  imports: [ 
     BrowserModule,
     AppRoutingModule,
     MaterialModule,
@@ -92,6 +103,7 @@ import { authReducer } from './store/reducers/userVerification.reducers';
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() })
   ],
   providers: [CountService ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent], 
+  entryComponents: [DeleteCoursesDialogComponent]
 })
 export class AppModule { }

@@ -23,7 +23,6 @@ export class AuthGuard implements CanActivate {
         if (isLoggedIn) {
           return true;
         } else {
-          alert('Session expired. Please log in.');
           this.router.navigate(['/login']);
           return false;
         }

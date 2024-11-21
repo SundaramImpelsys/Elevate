@@ -7,10 +7,16 @@ import { Observable } from 'rxjs';
 })
 export class NurseCourseService {
   private readonly jsonURL = 'assets/json/nurse-courses.json';
+  private readonly apiURL = 'http://localhost:3000/addCourse';
 
   constructor(private readonly http: HttpClient) {}
 
   getCourse(): Observable<any> {
     return this.http.get<any>(this.jsonURL);
   }
+
+  addCourse(course: any): Observable<any> { 
+    return this.http.post<any>(this.apiURL, course); 
+  }
+  
 }

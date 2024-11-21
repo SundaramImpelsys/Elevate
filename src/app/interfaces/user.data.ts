@@ -9,4 +9,5 @@ export interface UserData {
     password: string;
     confirmPassword: string;
     enrolledCourses: Array<string>;
+    createdCourses: Array<string>;
 }

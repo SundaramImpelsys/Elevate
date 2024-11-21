@@ -1,0 +1,43 @@
+.course-details {
+  padding: 20px;
+  margin: 20px;
+  color: #194866;
+}
+
+h1, h4 {
+  color: #ff7518;
+}
+
+.content {
+  padding: 20px;
+  border: 1px solid #ddd; 
+  border-radius: 5px;
+  margin-bottom: 20px;
+  max-height: 400px; 
+  overflow-y: scroll; 
+}
+
+.course-details h1 {
+  margin-top: 0;
+}
+
+.course-details h3, .course-details h4 {
+  margin-bottom: 5px;
+}
+
+.no-course {
+  padding: 20px;
+  text-align: center;
+  color: red;
+}
+
+.rating-section {
+  margin-top: 20px;
+}
+
+.rating-select {
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}

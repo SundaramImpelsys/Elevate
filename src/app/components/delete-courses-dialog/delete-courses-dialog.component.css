@@ -1,0 +1,17 @@
+.container{
+    padding: 30px;
+    border-radius: 30px;
+}
+.blueButton{
+    background-color: #194866;
+    color: white;
+  }
+
+  .orangeButton{
+    background-color: #ff7518;
+    color: white;
+  }
+
+  .delete:hover{
+    background-color: red;
+  }

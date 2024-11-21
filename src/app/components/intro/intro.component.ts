@@ -22,7 +22,7 @@ export class IntroComponent implements OnInit {
       next: (trainerCount) => {
         this.trainers = trainerCount;  
         this.loadingTrainer = false;       
-        console.log('trainers loaded:', this.trainers);
+        //console.log('trainers loaded:', this.trainers);
       },
       error: (err) => {
         console.error('Error loading course count:', err);
@@ -34,7 +34,7 @@ export class IntroComponent implements OnInit {
       next: (workshopCount) => {
         this.workshops = workshopCount;  
         this.loadingWorkshop = false;       
-        console.log('workshop loaded:', this.workshops);
+        //console.log('workshop loaded:', this.workshops);
       },
       error: (err) => {
         console.error('Error loading course count:', err);
@@ -46,7 +46,7 @@ export class IntroComponent implements OnInit {
       next: (courseCount) => {
         this.course = courseCount;  
         this.loadingCourse = false;       
-        console.log('Courses loaded:', this.course);
+        //console.log('Courses loaded:', this.course);
       },
       error: (err) => {
         console.error('Error loading course count:', err);

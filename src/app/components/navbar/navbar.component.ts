@@ -36,26 +36,7 @@ export class NavbarComponent implements OnInit {
   }
 
   logout(): void { 
-    
-
-    this.store.select(selectUser).pipe(
-      take(1),
-      switchMap(user => {
-        this.user = user;
-        if (this.user) {
-          return this.dataService.putItem(this.user.id, this.user);
-        } else {
-          return of(null); 
-        }
-      })
-    ).subscribe(
-      () => {
-        this.router.navigate(['login']); 
-      },
-      (error: any) => {
-        alert('An error occurred. Please try again.');
-      }
-    );
+    localStorage.clear();
     this.store.dispatch(logout());
     this.isLoggedIn = false;
     this.router.navigate(['']);

@@ -14,7 +14,7 @@ export class AnnouncementsComponent implements OnInit {
   currentPage: number = 1;
   itemsPerPage: number = 6;
 
-  constructor(private announcementService: AnnouncementService) {}
+  constructor(private readonly announcementService: AnnouncementService) {}
 
   ngOnInit(): void {
     this.announcementService.getAnnouncements().subscribe((data) => {

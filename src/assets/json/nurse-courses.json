@@ -1,39 +1,56 @@
 [
-    {
-      "title": "Fundamentals of Nursing",
-      "description": "Learn the basics of nursing care, including patient assessment and vital signs monitoring.",
-      "trainerName": "Alice Johnson",
-      "rating": 5
-    },
-    {
-      "title": "Advanced Patient Care",
-      "description": "Advanced techniques in patient care, including wound management and intravenous therapy.",
-      "trainerName": "Alice Johnson",
-      "rating": 3
-    },
-    {
-      "title": "Nursing Leadership",
-      "description": "Develop leadership skills for managing nursing teams and improving patient outcomes.",
-      "trainerName": "Alice Johnson",
-      "rating": 4
-    },
-    {
-      "title": "Pediatric Nursing",
-      "description": "Specialized care techniques for pediatric patients.",
-      "trainerName": "Bob Smith",
-      "rating": 4
-    },
-    {
-      "title": "Geriatric Nursing",
-      "description": "Comprehensive care for elderly patients, including chronic disease management.",
-      "trainerName": "Bob Smith",
-      "rating": 4
-    },
-    {
-      "title": "Emergency Nursing",
-      "description": "Critical care techniques for emergency situations.",
-      "trainerName": "Carol White",
-      "rating": 4
-    }
-  ]
-  
+  {
+    "title": "Fundamentals of Nursing",
+    "description": "Learn the basics of nursing care, including patient assessment and vital signs monitoring.",
+    "trainerName": "Alice Johnson",
+    "courseIntroduction": "Fundamentals of Nursing provides students with the essential knowledge and skills needed for basic nursing care. It focuses on patient assessment, vital signs monitoring, hygiene practices, infection control, and communication skills, laying a strong foundation for clinical practice.",
+    "courseKeyConcepts": "Patient Assessment: Techniques for evaluating a patient's health status; Vital Signs Monitoring: Importance of tracking temperature, pulse, respiration, and blood pressure; Hygiene & Infection Control: Preventing healthcare-associated infections; Communication Skills: Interacting effectively with patients and the healthcare team.",
+    "courseConclusion": "This course prepares students for hands-on clinical practice by building the core competencies needed for nursing care, promoting patient safety, and fostering effective communication in a healthcare setting.",
+    "rating": 5
+  },
+  {
+    "title": "Advanced Patient Care",
+    "description": "Advanced techniques in patient care, including wound management and intravenous therapy.",
+    "trainerName": "Alice Johnson",
+    "courseIntroduction": "Advanced Patient Care provides specialized nursing techniques for managing complex patient needs. The course covers advanced procedures like wound care, intravenous therapy, and catheterization, with a focus on critical thinking and evidence-based practices to enhance patient outcomes.",
+    "courseKeyConcepts": "Wound Management: Techniques for treating and dressing wounds; IV Therapy: Administration of intravenous fluids and medications; Catheterization: Insertion and care of catheters; Clinical Judgment: Making informed decisions based on evidence and patient conditions.",
+    "courseConclusion": "By mastering advanced techniques, students are equipped to handle complex medical procedures and enhance patient care through critical thinking and specialized skills in real-world scenarios.",
+    "rating": 3
+  },
+  {
+    "title": "Nursing Leadership",
+    "description": "Develop leadership skills for managing nursing teams and improving patient outcomes.",
+    "trainerName": "Alice Johnson",
+    "courseIntroduction": "Nursing Leadership focuses on developing effective leadership and management skills for nurses. Students will explore leadership theories, team dynamics, conflict resolution, and decision-making strategies to enhance patient care and improve organizational outcomes.",
+    "courseKeyConcepts": "Leadership Theories: Understanding different leadership styles; Team Dynamics: Managing and motivating nursing teams; Conflict Resolution: Techniques for resolving conflicts in healthcare settings; Decision-Making: Effective decision-making strategies in patient care and management.",
+    "courseConclusion": "This course equips students with the necessary tools to manage nursing teams, drive organizational success, and ensure the delivery of high-quality patient care.",
+    "rating": 4
+  },
+  {
+    "title": "Pediatric Nursing",
+    "description": "Specialized care techniques for pediatric patients.",
+    "trainerName": "Bob Smith",
+    "courseIntroduction": "Pediatric Nursing focuses on the specialized care required for children from infancy to adolescence. This course covers pediatric growth and development, common childhood illnesses, immunizations, and family-centered care, emphasizing communication with children and their families.",
+    "courseKeyConcepts": "Growth & Development: Stages of physical and cognitive development in children; Pediatric Conditions: Common illnesses and conditions in children; Immunizations: Vaccination schedules and their role in prevention; Family-Centered Care: Involving families in the care process.",
+    "courseConclusion": "The course prepares students to provide comprehensive pediatric care and communicate effectively with both children and their families, ensuring the best possible health outcomes.",
+    "rating": 4
+  },
+  {
+    "title": "Geriatric Nursing",
+    "description": "Comprehensive care for elderly patients, including chronic disease management.",
+    "trainerName": "Bob Smith",
+    "courseIntroduction": "Geriatric Nursing teaches the skills required for caring for elderly patients, focusing on managing chronic diseases, promoting independence, and improving quality of life. The course covers geriatric assessments, palliative care, and the ethical and legal aspects of caring for older adults.",
+    "courseKeyConcepts": "Chronic Disease Management: Addressing long-term conditions like diabetes, hypertension, and arthritis; Geriatric Assessments: Evaluating the health and functional status of elderly patients; Palliative Care: Providing comfort and end-of-life care; Ethical Considerations: Navigating ethical issues in elderly care.",
+    "courseConclusion": "This course prepares nurses to provide compassionate and comprehensive care for elderly patients, promoting health, independence, and dignity during their later years.",
+    "rating": 4
+  },
+  {
+    "title": "Emergency Nursing",
+    "description": "Critical care techniques for emergency situations.",
+    "trainerName": "Carol White",
+    "courseIntroduction": "Emergency Nursing equips students with the skills necessary to provide urgent care in emergency situations. The course covers triage, trauma care, cardiac and respiratory emergencies, disaster response, and advanced life support techniques.",
+    "courseKeyConcepts": "Triage: Prioritizing patients based on the severity of their condition; Trauma Care: Managing injuries and preventing complications; Cardiac & Respiratory Emergencies: Handling life-threatening heart and lung conditions; Disaster Response: Protocols for responding to large-scale emergencies.",
+    "courseConclusion": "By mastering critical care techniques, students are prepared to provide rapid, effective care in high-pressure emergency situations and make quick, life-saving decisions.",
+    "rating": 4
+  }
+]

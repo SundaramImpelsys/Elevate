@@ -1,0 +1,27 @@
+<app-navbar></app-navbar>
+<div *ngIf="courseData" class="course-details">
+    <h1><strong>{{ courseData.title }}</strong></h1>
+    <h3 *ngIf="courseData.trainerName">Trainer: {{ courseData.trainerName }}</h3>
+    <p *ngIf="courseData.description">{{ courseData.description }}</p>
+    <div class="content">
+        <h4>Introduction</h4>
+        <p>{{ courseData.courseIntroduction }}</p>
+        <h4>Key Concepts</h4>
+        <ul>
+            <li *ngFor="let concept of keyConcepts">{{ concept }}</li>
+        </ul>
+        <h4>Conclusion</h4>
+        <p>{{ courseData.courseConclusion }}</p>
+    </div>
+    <div class="rating-section">
+        <h4>Rate the Course:</h4>
+        <select class="rating-select" [(ngModel)]="selectedRating">
+            <option value="5" disabled hidden>Rate for 5</option>
+            <option *ngFor="let rating of [1, 2, 3, 4, 5]" [value]="rating">{{ rating }}</option>
+        </select>
+    </div>
+</div>
+<div *ngIf="!courseData" class="no-course">
+    <p>No course found with the title "{{ courseTitle }}".</p>
+</div>
+<app-footer></app-footer>

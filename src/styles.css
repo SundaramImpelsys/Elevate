@@ -22,3 +22,13 @@ body {
 ::-webkit-scrollbar {
     display: none; 
 }
+
+.blueButton{
+    background-color: #194866;
+    color: white;
+  }
+
+  .orangeButton{
+    background-color: #ff7518;
+    color: white;
+  }

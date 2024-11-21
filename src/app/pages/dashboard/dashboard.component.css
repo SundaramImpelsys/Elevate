@@ -1,4 +1,57 @@
-.container{
+.container {
     margin-top: 40px;
-    color: #194866
-}
+    color: #194866;
+  }
+  
+  .course-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    margin-bottom: 1rem;
+  }
+  
+  .course-title {
+    flex: 1;
+  }
+  
+  .course-actions {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .user-info {
+    margin-top: 2rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+  }
+  
+  h3 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .blueButton{
+    background-color: #194866;
+    color: white;
+  }
+
+  .orangeButton{
+    background-color: #ff7518;
+    color: white;
+  }
+
+  .btn:hover{
+    transform: scale(1.05);
+  }
+
+  .delete:hover{
+    background-color: red;
+  }
+
+  h2{
+    color: #ff7518;
+  }

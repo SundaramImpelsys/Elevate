@@ -1,0 +1,15 @@
+
+<div class="container">
+    <h1>Delete Courses</h1>
+    <div *ngFor="let course of user?.createdCourses">
+    <mat-checkbox (change)="toggleCourseSelection(course)">
+        {{ course }}
+    </mat-checkbox>
+    </div>
+    <div>
+    <div class="d-flex justify-content-between mt-3"> 
+        <button type="button" class="btn w-100 blueButton" (click)="cancel()">Cancel</button>
+        <button type="submit" class="btn w-100 delete ms-2 orangeButton" (click)="openDeleteDialog()">Delete</button>
+    </div>
+    </div>
+</div>

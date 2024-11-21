@@ -13,7 +13,10 @@ import { PharmacistCoursesComponent } from './pages/pharmacist-courses/pharmacis
 import { NutrionistCourseComponent } from './pages/nutrionist-course/nutrionist-course.component';
 import { DoctorCoursesComponent } from './pages/doctor-courses/doctor-courses.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { CreateCourseComponent } from './components/create-course/create-course.component';
 import { AuthGuard } from './auth.guard';
+import { DeleteCoursesDialogComponent } from './components/delete-courses-dialog/delete-courses-dialog.component';
+import { CoursePageComponent } from './pages/course-page/course-page.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -28,7 +31,10 @@ const routes: Routes = [
   { path:'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
   { path:'pharmacistCourses', component: PharmacistCoursesComponent},
   { path:'nutrionistCourses', component: NutrionistCourseComponent},
-  { path:'doctorCourses', component: DoctorCoursesComponent}
+  { path:'doctorCourses', component: DoctorCoursesComponent},
+  { path:'createCourse', component: CreateCourseComponent},
+  { path:'deleteCourse', component: DeleteCoursesDialogComponent},
+  { path: 'course-page', component: CoursePageComponent },
   
 ];
 
