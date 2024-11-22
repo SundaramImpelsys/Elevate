@@ -1,5 +1,5 @@
   .contact-container {
-    margin: 20px;
+    margin: 30px;
   }
   
   .map-container {
@@ -61,3 +61,32 @@
     text-decoration: underline;
   }
   
+  /* For the navbar, footer, and map */
+.fade-in {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* For mat-card components */
+.slide-up {
+  animation: slideUp 1.5s ease-in-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

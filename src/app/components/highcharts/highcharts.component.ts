@@ -89,7 +89,7 @@ export class HighchartsComponent implements OnInit {
         }
       },
       legend: { 
-        enabled: false 
+        enabled: false
         },
       series: [
         {

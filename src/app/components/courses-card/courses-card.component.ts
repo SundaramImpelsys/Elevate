@@ -7,6 +7,8 @@ import { Store } from '@ngrx/store';
 import { selectIsLoggedIn, selectUser } from 'src/app/store/selectors/userVerification.selectors';
 import { AuthState } from 'src/app/store/reducers/userVerification.reducers';
 import { updateUser } from 'src/app/store/actions/userVerification.actions';
+import { CustomDialogComponent } from '../custom-dialog/custom-dialog.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-courses-card',
@@ -19,7 +21,9 @@ export class CoursesCardComponent {
 
   constructor(private readonly dataService: DataService, 
     private readonly router: Router, 
-    private readonly store: Store<AuthState>) {}
+    public dialog: MatDialog,
+    private readonly store: Store<AuthState>,
+  ) {}
 
   @Input() title!: string;
   @Input() description!: string;
@@ -40,19 +44,24 @@ export class CoursesCardComponent {
     if (this.user) {
       const userClone = { ...this.user, enrolledCourses: [...this.user.enrolledCourses] };
       if (userClone.enrolledCourses.includes(this.title)) {
-        alert('Course already exists.');
+        this.openDialog("Course already exists");
         return;
       }
       userClone.enrolledCourses.unshift(this.title);
       this.dataService.putItem(this.user.id, userClone).subscribe(() => {
-        alert('Course added successfully');
+        this.openDialog("Course added successfully");
       });
       this.store.dispatch(updateUser({ user: userClone }));
     } else {
-      alert('You need to have an account to enroll this course.');
+      this.openDialog('You need to have an account to enroll this course.');
       this.router.navigate(['/signin']);
     }
   }
-  
+
+  openDialog(mes: string): void { 
+    this.dialog.open(CustomDialogComponent, { 
+      data: { message: mes } 
+    });
+  }
   
 }

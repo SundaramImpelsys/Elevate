@@ -17,3 +17,10 @@
     display: flex;
     justify-content: center;
 }
+
+.no-results { 
+    color: #ff7518; 
+    font-size: 2rem; 
+    margin: 1.5rem;
+    margin-bottom: 100px;
+  }

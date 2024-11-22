@@ -1,6 +1,6 @@
 <app-navbar></app-navbar>
 <div class="container">
-  <div class="custom-search">
+  <div class="custom-search" style="animation: fadeInUp 0.5s ease-in-out;">
     <input type="text" placeholder="Search workshops" (input)="onSearch($event)" />
     <i class="fas fa-search search-icon"></i>
   </div>
@@ -9,7 +9,7 @@
   No results found!
 </div>
 
-<div class="container">
+<div class="container" style="animation: fadeInUp 0.8s ease-in-out;">
   <div class="row">
     <div *ngFor="let announcement of paginatedAnnouncements" class="col-md-4">
       <div class="card">

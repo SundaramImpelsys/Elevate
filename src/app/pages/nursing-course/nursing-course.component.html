@@ -30,6 +30,11 @@
         [rating]="course.rating">
       </app-courses-card>
     </div>
+
+    <div *ngIf="filteredCourses.length === 0" class="no-results"> 
+      No results found!
+    </div>
+    
   </div>
   
   <!-- Pagination -->

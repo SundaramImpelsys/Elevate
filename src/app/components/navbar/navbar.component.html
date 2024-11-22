@@ -15,7 +15,7 @@
         <li class="nav-item" *ngIf="isLoggedIn">
           <a class="nav-link" routerLink="/dashboard">Dashboard</a>
         </li>
-        <li class="nav-item dropdown" *ngIf="!user || user?.profession === 'learner'">
+        <li class="nav-item dropdown" *ngIf="user?.role!='trainer'">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Courses
           </a>

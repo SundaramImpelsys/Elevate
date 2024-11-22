@@ -13,13 +13,13 @@
         <h4>Conclusion</h4>
         <p>{{ courseData.courseConclusion }}</p>
     </div>
-    <div class="rating-section">
+    <!-- <div class="rating-section">
         <h4>Rate the Course:</h4>
         <select class="rating-select" [(ngModel)]="selectedRating">
             <option value="5" disabled hidden>Rate for 5</option>
             <option *ngFor="let rating of [1, 2, 3, 4, 5]" [value]="rating">{{ rating }}</option>
         </select>
-    </div>
+    </div> -->
 </div>
 <div *ngIf="!courseData" class="no-course">
     <p>No course found with the title "{{ courseTitle }}".</p>

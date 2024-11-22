@@ -48,6 +48,8 @@ import { HighchartsComponent } from './components/highcharts/highcharts.componen
 import { DeleteCoursesDialogComponent } from './components/delete-courses-dialog/delete-courses-dialog.component';
 import { CoursePageComponent } from './pages/course-page/course-page.component';
 import { DeleteConfirmationComponent } from './components/delete-confirmation/delete-confirmation.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { CustomDialogComponent } from './components/custom-dialog/custom-dialog.component';
 
 
 @NgModule({
@@ -88,6 +90,8 @@ import { DeleteConfirmationComponent } from './components/delete-confirmation/de
     DeleteCoursesDialogComponent,
     CoursePageComponent,
     DeleteConfirmationComponent,
+    PageNotFoundComponent,
+    CustomDialogComponent,
   ],
   imports: [ 
     BrowserModule,

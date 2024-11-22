@@ -5,6 +5,8 @@ import { UserData } from '../../interfaces/user.data';
 import { Store } from '@ngrx/store';
 import { login } from '../../store/actions/userVerification.actions';
 import { AuthState } from '../../store/reducers/userVerification.reducers'; // Ensure the import path is correct
+import { MatDialog } from '@angular/material/dialog';
+import { CustomDialogComponent } from 'src/app/components/custom-dialog/custom-dialog.component';
 
 @Component({
   selector: 'app-login',
@@ -20,11 +22,18 @@ export class LoginComponent {
   constructor(
     private readonly router: Router, 
     private readonly dataService: DataService,
+    public dialog: MatDialog,
     private readonly store: Store<AuthState>
   ) {}
 
   togglePasswordVisibility(): void { 
     this.isPasswordVisible = !this.isPasswordVisible; 
+  }
+
+  openDialog(mes: string): void { 
+    this.dialog.open(CustomDialogComponent, { 
+      data: { message: mes } 
+    });
   }
 
   onSubmit() {
@@ -37,12 +46,12 @@ export class LoginComponent {
           this.store.dispatch(login({ user }));
           this.router.navigate(['dashboard']); 
         } else {
-          alert('Invalid username or password, if new to elevate create a new account');
+          this.openDialog('Invalid username or password, if new to elevate create a new account');
         }
       },
       error: (error: any) => {
         console.error('Error fetching items:', error);
-        alert('An error occurred. Please try again.');
+        this.openDialog('An error occurred. Please try again.');
       }
     });
   }

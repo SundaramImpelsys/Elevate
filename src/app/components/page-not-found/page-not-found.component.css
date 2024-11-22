@@ -1,0 +1,33 @@
+.container {
+    margin-top: 50px;
+    color: #194866;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  h1 {
+    font-size: 100px;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  .orangeButton{
+    background-color: #ff7518;
+    color: white;
+  }
+
+  .btn:hover{
+    transform: scale(1.05);
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  

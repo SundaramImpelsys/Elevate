@@ -10,6 +10,7 @@ import { logout, updateUser } from 'src/app/store/actions/userVerification.actio
 import { DeleteCoursesDialogComponent } from 'src/app/components/delete-courses-dialog/delete-courses-dialog.component';
 import { MatDialog } from '@angular/material/dialog';
 import { DeleteConfirmationComponent } from 'src/app/components/delete-confirmation/delete-confirmation.component';
+import { CustomDialogComponent } from 'src/app/components/custom-dialog/custom-dialog.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -22,6 +23,7 @@ export class DashboardComponent implements OnInit {
   isLoggedIn: boolean = false;
   isCreatingCourse: any;
   viewAllCourse: boolean = false;
+  createdCoursesEmpty: boolean = false;
 
   constructor(private readonly router: Router, 
     public dialog: MatDialog,
@@ -35,9 +37,15 @@ export class DashboardComponent implements OnInit {
     }); 
     
     this.store.select(selectUser).subscribe(user => { 
-      this.user = user; 
+      this.user = user;
       console.log(user);
+      if(user.createdCourses.length === 0){
+        this.createdCoursesEmpty = true;
+      }
     });
+
+
+
   }
 
   viewAllCoursesToggle(): void { 
@@ -81,13 +89,18 @@ export class DashboardComponent implements OnInit {
           this.router.navigate(['']);
         },
         (error: any) => {
-          console.error('Error deleting account:', error);
-          alert('An error occurred. Please try again.');
+          this.openDialog('An error occurred. Please try again.');
         }
       );
     }
   }
 
+  openDialog(mes: string): void { 
+    this.dialog.open(CustomDialogComponent, { 
+      data: { message: mes } 
+    });
+  }
+  
   openDeleteCoursesDialog(): void { 
     const dialogRef = this.dialog.open(DeleteCoursesDialogComponent, 
       { width: '300px', data: {} 

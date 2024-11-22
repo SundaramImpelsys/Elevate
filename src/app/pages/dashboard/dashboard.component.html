@@ -31,7 +31,13 @@
     &nbsp;
     <button class="btn orangeButton" (click)="openDeleteCoursesDialog()">Delete Courses</button>
 
+  <div *ngIf="!createdCoursesEmpty">
     <app-highcharts></app-highcharts>
+  </div>
+
+  <div *ngIf="createdCoursesEmpty" class="empty">
+     You haven't created any courses, Start creating!!
+  </div>
 
   </div>
   

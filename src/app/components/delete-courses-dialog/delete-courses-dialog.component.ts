@@ -19,6 +19,7 @@ export class DeleteCoursesDialogComponent implements OnInit {
   user: UserData | null = null;
   selectedCourses: string[] = [];
   removeCourses: string[] = [];
+  createdCoursesEmpty: boolean = false;
 
   constructor(
     private readonly store: Store<AuthState>,
@@ -33,6 +34,9 @@ export class DeleteCoursesDialogComponent implements OnInit {
     this.store.select(selectUser).subscribe(user => { 
       this.user = user;
       console.log(user);
+      if(user.createdCourses.length === 0){
+        this.createdCoursesEmpty = true;
+      }
     });
 
     if (this.user?.createdCourses) {
@@ -65,7 +69,6 @@ export class DeleteCoursesDialogComponent implements OnInit {
     }); 
   }
   
-
   deleteSelectedCourses() {
     if (this.user) {
       const userClone = { ...this.user, createdCourses: this.selectedCourses };
@@ -74,6 +77,9 @@ export class DeleteCoursesDialogComponent implements OnInit {
       this.store.dispatch(updateUser({ user: this.user }));
       this.dataService.putItem(this.user.id, this.user).subscribe(() => {
         console.log('Selected courses removed successfully', this.selectedCourses);
+        if(userClone.createdCourses.length === 0) {
+          this.createdCoursesEmpty = true;
+        }
       });
       const profession = this.user.profession;
       let removeCoursesCopy = this.removeCourses;
@@ -84,6 +90,19 @@ export class DeleteCoursesDialogComponent implements OnInit {
           console.log('Courses successfully removed from backend');
         });
       }
+      
+      // New logic to remove courses from enrolledCourses of all users
+      this.dataService.getItems().subscribe(users => {
+        users.forEach(user => {
+          if (user.role.includes('learner')) {
+            user.enrolledCourses = user.enrolledCourses.filter(course => !removeCoursesCopy.includes(course));
+            this.dataService.putItem(user.id, user).subscribe(() => {
+              console.log(`Updated enrolled courses for user: ${user.id}`);
+            });
+          }
+        });
+      });
+
       this.selectedCourses = [];
       this.dialogRef.close();
     }

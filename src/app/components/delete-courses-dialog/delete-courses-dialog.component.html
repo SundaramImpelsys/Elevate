@@ -1,10 +1,14 @@
 
 <div class="container">
     <h1>Delete Courses</h1>
+    <div *ngIf="createdCoursesEmpty" class="empty text-danger">
+        You haven't created any courses, Start creating!!
+     </div>
     <div *ngFor="let course of user?.createdCourses">
     <mat-checkbox (change)="toggleCourseSelection(course)">
         {{ course }}
     </mat-checkbox>
+    
     </div>
     <div>
     <div class="d-flex justify-content-between mt-3"> 

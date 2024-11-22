@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { SubscriptionService } from '../../services/subscription.service';
 import { NgForm } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
+import { CustomDialogComponent } from '../custom-dialog/custom-dialog.component';
 
 @Component({
   selector: 'app-footer',
@@ -11,7 +13,16 @@ export class FooterComponent {
   email: string = '';
   loading: boolean = false;
 
-  constructor(private readonly subscriptionService: SubscriptionService) {}
+  constructor(
+    private readonly subscriptionService: SubscriptionService,
+    public dialog: MatDialog,
+  ) {}
+
+  openDialog(mes: string): void { 
+    this.dialog.open(CustomDialogComponent, { 
+      data: { message: mes } 
+    });
+  }
 
   onSubscribe(subscribeForm: NgForm) {
     if (this.email) {
@@ -20,13 +31,13 @@ export class FooterComponent {
         response => {
           console.log('Subscription successful', response);
           this.loading = false;
-          alert('Thank you for subscribing!');
+          this.openDialog("Thank you for subscribing!");
           subscribeForm.resetForm();
         },
         error => {
           console.error('Subscription error', error);
           this.loading = false;
-          alert('An error occurred. Please try again.');
+          this.openDialog("An error occurred. Please try again.");
         }
       );
     }

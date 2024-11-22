@@ -1,4 +1,5 @@
 import { Component, Input, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
+import { TrustedCompaniesService } from 'src/app/services/trusted-companies.service';
 
 @Component({
   selector: 'app-trusted-companies',
@@ -6,11 +7,14 @@ import { Component, Input, AfterViewInit, ViewChild, ElementRef } from '@angular
   styleUrls: ['./trusted-companies.component.css']
 })
 export class TrustedCompaniesComponent implements AfterViewInit {
-  @Input() companies: { imageSrc: string, title?: string, description?: string }[] = [];
+  companies: any = [];
   
   @ViewChild('scrollingContent') scrollingContent!: ElementRef;
-
+  constructor(private readonly trustedCompaniesService: TrustedCompaniesService) {}
   ngAfterViewInit() {
+    this.trustedCompaniesService.getTrustedCompanies().subscribe((data) => {
+      this.companies = data;
+    });
     this.startScrolling();
   }
 

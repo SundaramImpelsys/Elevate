@@ -11,6 +11,8 @@ import { updateUser } from 'src/app/store/actions/userVerification.actions';
 import { DataService } from 'src/app/services/data.service';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { CustomDialogComponent } from '../custom-dialog/custom-dialog.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-create-course',
@@ -29,6 +31,7 @@ export class CreateCourseComponent implements OnInit {
   constructor(
     private readonly store: Store<AuthState>,
     private readonly dataService: DataService,
+    public dialog: MatDialog,
     private readonly nurseCourseService: NurseCourseService,
     private readonly doctorCourseService: DoctorCourseService,
     private readonly nutritionistCourseService: NutritionistCourseService,
@@ -66,7 +69,7 @@ export class CreateCourseComponent implements OnInit {
     if (this.user) {
       const userClone = { ...this.user, createdCourses: [...this.user.createdCourses] };
       if (userClone.createdCourses.includes(this.title)) {
-        alert('Course already exists.');
+        this.openDialog("Course added successfully");
         return;
       }
       userClone.createdCourses.unshift(this.title);
@@ -75,7 +78,7 @@ export class CreateCourseComponent implements OnInit {
       });
       this.store.dispatch(updateUser({ user: userClone }));
     } else {
-      alert('User is not logged in.');
+      this.openDialog('User is not logged in.');
     }
 
     const profession = this.user?.profession;
@@ -100,6 +103,12 @@ export class CreateCourseComponent implements OnInit {
 
   allStepTwoFieldsFilled(): boolean {
     return this.isValidInput(this.courseIntroduction) && this.isValidInput(this.courseKeyConcepts) && this.isValidInput(this.courseConclusion);
+  }
+
+  openDialog(mes: string): void { 
+    this.dialog.open(CustomDialogComponent, { 
+      data: { message: mes } 
+    });
   }
 
   cancel(): void {

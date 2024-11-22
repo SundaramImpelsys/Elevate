@@ -55,3 +55,10 @@
   h2{
     color: #ff7518;
   }
+
+  .empty { 
+    color: #194866; 
+    font-size: 2rem; 
+    margin: 2rem 0;
+    margin-bottom: 100px;
+  }

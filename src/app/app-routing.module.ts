@@ -17,6 +17,7 @@ import { CreateCourseComponent } from './components/create-course/create-course.
 import { AuthGuard } from './auth.guard';
 import { DeleteCoursesDialogComponent } from './components/delete-courses-dialog/delete-courses-dialog.component';
 import { CoursePageComponent } from './pages/course-page/course-page.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -35,6 +36,7 @@ const routes: Routes = [
   { path:'createCourse', component: CreateCourseComponent},
   { path:'deleteCourse', component: DeleteCoursesDialogComponent},
   { path: 'course-page', component: CoursePageComponent },
+  { path: '**', component: PageNotFoundComponent }
   
 ];
 

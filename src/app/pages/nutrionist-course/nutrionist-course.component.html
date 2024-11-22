@@ -18,6 +18,11 @@
         <option *ngFor="let rating of uniqueRatings">{{ rating }}</option>
       </select>
     </div>
+
+    <div *ngIf="filteredCourses.length === 0" class="no-results"> 
+      No results found!
+    </div>
+    
   </div>
 
   <!-- Course Cards -->
