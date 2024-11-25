@@ -46,7 +46,7 @@ export class LoginComponent {
           this.store.dispatch(login({ user }));
           this.router.navigate(['dashboard']); 
         } else {
-          this.openDialog('Invalid username or password, if new to elevate create a new account');
+          this.openDialog('Invalid username or password, First time to elevate then create a new account');
         }
       },
       error: (error: any) => {

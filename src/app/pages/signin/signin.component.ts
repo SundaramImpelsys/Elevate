@@ -31,6 +31,9 @@ export class SigninComponent {
   step: number = 1; 
   emailExists: boolean = false;
 
+  isFocusedEmail: boolean = false;
+
+
   constructor(
     private readonly countService: CountService, 
     private readonly router: Router, 
@@ -38,6 +41,8 @@ export class SigninComponent {
     private readonly dataService: DataService) {}
 
   emailExist(): void {
+    this.isFocusedEmail = false;
+    console.log(this.isFocusedEmail);
     this.dataService.getItems().subscribe((items: UserData[]) => {
       const user = items.find(item => item.email === this.registrationData.email);
       this.emailExists = !!user; // Set emailExists based on whether the user is found
@@ -45,6 +50,11 @@ export class SigninComponent {
       console.error('Error fetching items:', error);
       this.emailExists = false; // Default to false on error
     });
+  }
+
+  onEmailFocus(){
+    this.isFocusedEmail = true;
+    console.log(this.isFocusedEmail);
   }
 
 

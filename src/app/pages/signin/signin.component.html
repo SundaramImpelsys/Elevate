@@ -16,7 +16,7 @@
               <div *ngIf="step === 1">
                 <div class="mb-3">
                   <label for="name" class="form-label">Name</label>
-                  <input type="text" class="form-control" id="name" placeholder="Name" required [(ngModel)]="registrationData.name" name="name" #nameModel="ngModel" pattern="[A-Za-z]+">
+                  <input type="text" class="form-control" id="name" placeholder="Name" required [(ngModel)]="registrationData.name" name="name" #nameModel="ngModel" pattern="[A-Za-z ]+">
                   <div *ngIf="nameModel.invalid && nameModel.touched" class="text-danger small">
                     <div *ngIf="nameModel.errors?.['required']">Name is required.</div>
                     <div *ngIf="nameModel.errors?.['pattern']">Only characters allowded.</div>
@@ -24,12 +24,12 @@
                 </div>
                 <div class="mb-3">
                   <label for="email" class="form-label">Email</label>
-                  <input type="email" class="form-control" id="email" placeholder="Email" required email [(ngModel)]="registrationData.email" name="email" (blur)="emailExist()" #emailModel="ngModel">
-                  <div *ngIf="emailModel.invalid && emailModel.touched" class="text-danger small">
+                  <input type="email" class="form-control" id="email" placeholder="Email" required email [(ngModel)]="registrationData.email" name="email" (focus)="onEmailFocus()" (blur)="emailExist()" #emailModel="ngModel">
+                  <div *ngIf="!isFocusedEmail && emailModel.invalid && emailModel.touched" class="text-danger small">
                     <div *ngIf="emailModel.errors?.['required']">Email is required.</div>
                     <div *ngIf="emailModel.errors?.['email']">Email is not valid.</div>
                   </div>
-                  <div *ngIf="emailExists" class="text-danger small">Email already exists. Try with another one</div>
+                  <div *ngIf="!isFocusedEmail && emailModel.valid && emailExists" class="text-danger small">Email already exists. Try with another one</div>
                 </div>
                 <div class="mb-3">
                   <label class="form-label">Gender</label><br>

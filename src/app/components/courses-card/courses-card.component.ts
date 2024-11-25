@@ -41,7 +41,7 @@ export class CoursesCardComponent {
   }
 
   sendData() {
-    if (this.user) {
+    if (this.user && this.user.role === 'learner') {
       const userClone = { ...this.user, enrolledCourses: [...this.user.enrolledCourses] };
       if (userClone.enrolledCourses.includes(this.title)) {
         this.openDialog("Course already exists");
@@ -52,7 +52,10 @@ export class CoursesCardComponent {
         this.openDialog("Course added successfully");
       });
       this.store.dispatch(updateUser({ user: userClone }));
-    } else {
+    } else if(this.user){
+      this.openDialog("Only learners can enroll in courses");
+    } 
+    else {
       this.openDialog('You need to have an account to enroll this course.');
       this.router.navigate(['/signin']);
     }

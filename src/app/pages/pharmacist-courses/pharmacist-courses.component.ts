@@ -13,7 +13,7 @@ export class PharmacistCoursesComponent {
   uniqueRatings: number[] = [];
 
   selectedTrainer: string = '';
-  selectedRating: number | null = null;
+  selectedRating: string = '';
   searchQuery: string = '';
 
   currentPage: number = 1;
@@ -43,7 +43,7 @@ export class PharmacistCoursesComponent {
   applyFilters(): void {
     this.filteredCourses = this.courses.filter((course: any) => {
       const trainerMatch = this.selectedTrainer ? course.trainerName === this.selectedTrainer : true;
-      const ratingMatch = this.selectedRating !== null ? course.rating === Number(this.selectedRating) : true;
+      const ratingMatch = this.selectedRating  ? course.rating === Number(this.selectedRating) : true;
       const searchMatch = course.title.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
                           course.description.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
                           course.trainerName.toLowerCase().includes(this.searchQuery.toLowerCase());

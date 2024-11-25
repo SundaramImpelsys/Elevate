@@ -60,8 +60,10 @@ export class DeleteCoursesDialogComponent implements OnInit {
     this.selectedCourses = selectedCoursesCopy;
   }
 
-  openDeleteDialog(): void { 
-    const dialogRef = this.dialog.open(DeleteConfirmationComponent); 
+  openDeleteDialog(mes: string): void { 
+    const dialogRef = this.dialog.open(DeleteConfirmationComponent,{
+      data: { message: mes }
+    }); 
     dialogRef.afterClosed().subscribe(result => { 
       if (result) { 
         this.deleteSelectedCourses(); 

@@ -4,7 +4,7 @@
   <p>Learn from world-class experts. Provide Your Details we will get back to you!</p>
   <form [formGroup]="freeTrialForm" (ngSubmit)="onSubmit()" class="row g-3">
     <div class="col-md-3">
-      <input type="text" class="form-control" formControlName="name" placeholder="Name" pattern="[A-Za-z]+">
+      <input type="text" class="form-control" formControlName="name" placeholder="Name" pattern="[A-Za-z ]+">
       <small *ngIf="freeTrialForm.get('name')?.invalid && (freeTrialForm.get('name')?.dirty || freeTrialForm.get('name')?.touched)" 
              class="text-white error-message" style="text-align: left; display: block;">
         <span *ngIf="freeTrialForm.get('name')?.errors?.['required']">Name is required.</span>
