@@ -6,7 +6,7 @@
     "courseIntroduction": "Clinical Medicine provides a comprehensive overview of the principles of clinical medicine. It focuses on diagnosing and treating common diseases, patient history taking, physical examinations, and the use of diagnostic tools. The course emphasizes evidence-based practices and integrates case studies to help students apply clinical guidelines in real-world scenarios.",
     "courseKeyConcepts": "Diagnosis & Treatment: Methods for identifying and managing common diseases; Patient History: Techniques for gathering patient information; Physical Examination: Key steps in conducting thorough physical assessments; Diagnostic Tools: Understanding the role of laboratory tests and imaging in diagnosis; Evidence-Based Practice: Applying research and guidelines to clinical decision-making.",
     "courseConclusion": "This course prepares students to confidently integrate clinical findings with diagnostic results, enabling them to make accurate diagnoses and develop effective treatment plans based on evidence-based practices.",
-    "rating": 4.7
+    "rating": 2
   },
   {
     "title": "Advanced Diagnostics",
@@ -24,7 +24,7 @@
     "courseIntroduction": "Surgical Techniques teaches advanced surgical skills, covering preoperative assessments, surgical anatomy, and the technical aspects of performing various surgeries. The course also includes postoperative care, minimally invasive surgery, suturing, and wound management, with hands-on practice to build proficiency and confidence.",
     "courseKeyConcepts": "Surgical Anatomy: Understanding the anatomy relevant to various surgeries; Preoperative Assessment: Evaluating patients before surgery; Surgical Procedures: Techniques for performing surgeries and using surgical instruments; Minimally Invasive Surgery: Techniques for reducing recovery time and complications; Postoperative Care: Managing patient recovery and preventing complications.",
     "courseConclusion": "Students will gain the skills necessary to perform a wide range of surgical procedures safely and confidently, with a strong understanding of the principles of aseptic technique and patient safety.",
-    "rating": 4.9
+    "rating": 4
   },
   {
     "title": "Pediatric Medicine",
@@ -33,7 +33,7 @@
     "courseIntroduction": "Pediatric Medicine focuses on the unique care needs of children from infancy through adolescence. It covers topics such as growth and development, pediatric illnesses, immunizations, and pediatric emergency care, emphasizing family-centered care and effective communication with both children and their families.",
     "courseKeyConcepts": "Growth & Development: Stages of physical and emotional development in children; Pediatric Conditions: Common illnesses and treatments in pediatric patients; Immunizations: Vaccination schedules and their importance; Family-Centered Care: Involving families in decision-making and care; Pediatric Emergencies: Responding to urgent medical situations in children.",
     "courseConclusion": "By completing this course, students will be equipped with the specialized knowledge and skills needed to care for pediatric patients and effectively communicate with both children and their families, ensuring optimal health outcomes.",
-    "rating": 4.7
+    "rating": 3
   },
   {
     "title": "Geriatric Medicine",
@@ -42,7 +42,7 @@
     "courseIntroduction": "Geriatric Medicine covers the comprehensive care of elderly patients, addressing the management of chronic diseases, functional assessments, and promoting healthy aging. The course explores common geriatric syndromes, palliative care, and end-of-life care, as well as the ethical and legal aspects of geriatric care.",
     "courseKeyConcepts": "Chronic Disease Management: Addressing long-term conditions such as hypertension and diabetes; Geriatric Syndromes: Understanding conditions like dementia, frailty, and falls; Palliative Care: Providing comfort care for the terminally ill; Functional Assessment: Evaluating the physical and cognitive capabilities of elderly patients; Ethical Issues: Navigating complex ethical challenges in geriatric care.",
     "courseConclusion": "Students will be prepared to deliver comprehensive and compassionate care to elderly patients, helping them maintain quality of life through appropriate medical management and psychosocial support.",
-    "rating": 4.7
+    "rating": 5
   },
   {
     "title": "Emergency Medicine",
@@ -51,6 +51,6 @@
     "courseIntroduction": "Emergency Medicine provides critical care knowledge and techniques necessary for managing emergency and life-threatening situations. The course covers triage, resuscitation, trauma care, cardiac and respiratory emergencies, and disaster response, with an emphasis on rapid decision-making and advanced life support techniques.",
     "courseKeyConcepts": "Triage: Prioritizing patient care based on urgency; Resuscitation: Techniques for restoring circulation and breathing; Trauma Care: Managing injuries and preventing complications; Cardiac & Respiratory Emergencies: Life-saving techniques for heart and lung crises; Disaster Response: Protocols for large-scale emergencies and mass casualty situations.",
     "courseConclusion": "This course prepares students to respond effectively to high-pressure emergency scenarios, equipping them with the skills necessary to manage life-threatening conditions and provide advanced care under stress.",
-    "rating": 4.9
+    "rating": 2
   }
 ]
