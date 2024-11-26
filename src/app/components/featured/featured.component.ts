@@ -9,7 +9,7 @@ export class FeaturedComponent {
   isHovered = false;
   courses = [
     { imageSrc: 'assets/featured/nurse.png', title: 'Nursing', route: 'nursingCourse' },
-    { imageSrc: 'assets/featured/pharmacist.png', title: 'Medicine', route: 'pharmacistCourses'},
+    { imageSrc: 'assets/featured/pharmacist.png', title: 'Pharmacist', route: 'pharmacistCourses'},
     { imageSrc: 'assets/featured/medical profession.png', title: 'Doctor', route: 'doctorCourses'},
     { imageSrc: 'assets/featured/nutritionist.png', title: 'Nutrionist', route: 'nutrionistCourses'},
   ];

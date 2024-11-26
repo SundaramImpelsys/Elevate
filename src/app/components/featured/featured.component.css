@@ -12,3 +12,6 @@
     background-color: #194866;
   }
   
+  .card-pointer{
+    cursor: pointer;
+  }

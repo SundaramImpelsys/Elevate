@@ -1,7 +1,7 @@
 .custom-container {
     background-color: #FF7518;
     border-radius: 15px;
-    margin: 20px;
+    margin: 20px 0;
     color: white;
     box-shadow: 0 4px 10px rgba(255, 117, 24, 0.9); /* Darker shade */
   }

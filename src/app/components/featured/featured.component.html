@@ -2,7 +2,7 @@
   <h1>Featured Courses</h1>
   <div class="row">
     <div class="col-md-3" *ngFor="let course of courses">
-      <div matTooltip="Tap to explore the courses available on this" aria-label="Div that displays a tooltip when focused or hovered over">
+      <div class="card-pointer" matTooltip="Tap to explore the courses available on this" aria-label="Div that displays a tooltip when focused or hovered over">
         <app-card [imageSrc]="course.imageSrc" [title]="course.title" [route]="course.route"></app-card>
       </div>
     </div>

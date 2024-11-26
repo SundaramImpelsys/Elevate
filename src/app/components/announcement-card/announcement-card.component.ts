@@ -10,5 +10,4 @@ export class AnnouncementCardComponent {
   @Input() title: string = '';
   @Input() description: string = '';
   @Input() postedBy: string = '';
-  @Input() time: string = '';
 }

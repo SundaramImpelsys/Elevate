@@ -4,7 +4,7 @@
       <button class="btn btn-announcement" routerLink="announcement">Go to Announcements</button>
     </div>
     <div *ngFor="let announcement of announcements">
-      <app-announcement-card [imageSrc]="announcement.imageSrc" [title]="announcement.title" [description]="announcement.description" [postedBy]="announcement.postedBy" [time]="announcement.time"></app-announcement-card>
+      <app-announcement-card [imageSrc]="announcement.imageSrc" [title]="announcement.title" [description]="announcement.description" [postedBy]="announcement.postedBy" ></app-announcement-card>
     </div>
   </div>
   

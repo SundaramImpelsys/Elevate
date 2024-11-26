@@ -7,6 +7,7 @@
     box-shadow: 0 4px 10px rgba(25, 72, 102, 0.9);
     padding: 10px;
     max-height: 530px;
+    border-radius: 10px;
   }
   
   mat-card {

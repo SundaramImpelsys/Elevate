@@ -3,99 +3,85 @@
         "imageSrc": "assets/announcement/3.png",
         "title": "Workshop on Nursing",
         "description": "Participate in our upcoming workshop focused on nursing skills and techniques. Connect with fellow nursing professionals and enhance your knowledge.",
-        "postedBy": "Mary Smith",
-        "time": "32 days 3 hours ago"
+        "postedBy": "Mary Smith"
     },
     {
         "imageSrc": "assets/announcement/1.png",
         "title": "Pharmacy Seminar",
         "description": "Join us for an insightful seminar on the latest trends and practices in pharmacy. Explore advancements in pharmaceutical science.",
-        "postedBy": "John Doe",
-        "time": "15 days 5 hours ago"
+        "postedBy": "John Doe"
     },
     {
         "imageSrc": "assets/announcement/2.png",
         "title": "Doctor's Training Workshop",
         "description": "Improve your medical skills and knowledge in this comprehensive doctor's training workshop. Gain hands-on experience and expert guidance.",
-        "postedBy": "Jane Doe",
-        "time": "7 days 10 hours ago"
+        "postedBy": "Jane Doe"
     },
     {
         "imageSrc": "assets/announcement/3.png",
         "title": "Nutrition Seminar",
         "description": "Join us for a nutrition seminar and learn about healthy eating habits and nutritional science. Gain insights from leading nutritionists.",
-        "postedBy": "Chris Evans",
-        "time": "22 days 8 hours ago"
+        "postedBy": "Chris Evans"
     },
     {
         "imageSrc": "assets/announcement/2.png",
         "title": "Health Professional Workshop",
         "description": "A workshop dedicated to health professionals looking to expand their expertise. Enhance your skills and network with peers.",
-        "postedBy": "Rebecca Green",
-        "time": "18 days 6 hours ago"
+        "postedBy": "Rebecca Green"
     },
     {
         "imageSrc": "assets/announcement/1.png",
         "title": "Nursing Techniques Seminar",
         "description": "Learn advanced nursing techniques in this interactive seminar. Enhance your practical skills and knowledge in a collaborative environment.",
-        "postedBy": "Michael Brown",
-        "time": "10 days 11 hours ago"
+        "postedBy": "Michael Brown"
     },
     {
         "imageSrc": "assets/announcement/3.png",
         "title": "Pharmacist Training Program",
         "description": "Enhance your skills as a pharmacist with our specialized training program. Learn about new pharmaceutical practices and innovations.",
-        "postedBy": "Laura White",
-        "time": "5 days 4 hours ago"
+        "postedBy": "Laura White"
     },
     {
         "imageSrc": "assets/announcement/2.png",
         "title": "Health Awareness Workshop",
         "description": "Raise your health awareness by attending this informative workshop. Gain knowledge on preventive health measures and wellness.",
-        "postedBy": "David Wilson",
-        "time": "27 days 12 hours ago"
+        "postedBy": "David Wilson"
     },
     {
         "imageSrc": "assets/announcement/1.png",
         "title": "Doctor's Seminar",
         "description": "A seminar for doctors focusing on the latest medical research and practices. Stay updated with new findings and technologies.",
-        "postedBy": "Emily Johnson",
-        "time": "14 days 9 hours ago"
+        "postedBy": "Emily Johnson"
     },
     {
         "imageSrc": "assets/announcement/2.png",
         "title": "Nutritionist Workshop",
         "description": "Join our nutritionist workshop and gain insights into diet planning and nutrition. Learn from experts and improve your dietary knowledge.",
-        "postedBy": "Adam Thomas",
-        "time": "19 days 7 hours ago"
+        "postedBy": "Adam Thomas"
     },
     {
         "imageSrc": "assets/announcement/3.png",
         "title": "Nursing Skills Enhancement",
         "description": "Enhance your nursing skills in this targeted workshop. Participate in practical sessions and improve your clinical competence.",
-        "postedBy": "Olivia Taylor",
-        "time": "8 days 6 hours ago"
+        "postedBy": "Olivia Taylor"
     },
     {
         "imageSrc": "assets/announcement/1.png",
         "title": "Pharmacy Practice Workshop",
         "description": "A workshop focused on modern pharmacy practices and innovations. Enhance your pharmaceutical knowledge and stay current in the field.",
-        "postedBy": "Sophia Anderson",
-        "time": "20 days 5 hours ago"
+        "postedBy": "Sophia Anderson"
     },
     {
         "imageSrc": "assets/announcement/2.png",
         "title": "Health and Wellness Seminar",
         "description": "Participate in our health and wellness seminar to learn about holistic health practices. Improve your overall well-being with expert guidance.",
-        "postedBy": "James Clark",
-        "time": "24 days 3 hours ago"
+        "postedBy": "James Clark"
     },
     {
         "imageSrc": "assets/announcement/3.png",
         "title": "Doctor's Continuing Education",
         "description": "A continuing education workshop for doctors to stay updated on medical advancements. Enhance your knowledge and professional development.",
-        "postedBy": "Maria Robinson",
-        "time": "16 days 10 hours ago"
+        "postedBy": "Maria Robinson"
     },
     {
         "imageSrc": "assets/announcement/1.png",
@@ -108,14 +94,12 @@
         "imageSrc": "assets/announcement/2.png",
         "title": "Nursing Leadership Seminar",
         "description": "Learn about leadership in nursing and how to take charge in healthcare settings. Enhance your leadership skills and confidence.",
-        "postedBy": "Ava Lee",
-        "time": "23 days 7 hours ago"
+        "postedBy": "Ava Lee"
     },
     {
         "imageSrc": "assets/announcement/1.png",
         "title": "Pharmacist Innovation Workshop",
         "description": "Discover new innovations in the field of pharmacy in this workshop. Stay updated with the latest advancements and trends.",
-        "postedBy": "Noah Harris",
-        "time": "21 days 6 hours ago"
+        "postedBy": "Noah Harris"
     }
 ]
