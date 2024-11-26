@@ -102,7 +102,7 @@ export class HighchartsComponent implements OnInit {
       plotOptions: {
         column: {
           colorByPoint: true,
-          colors: ['#ff7518', '#194866']
+          colors: [ '#194866']
         }
       }
     };
