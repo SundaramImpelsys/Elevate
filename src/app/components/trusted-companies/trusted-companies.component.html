@@ -3,12 +3,12 @@
   <div class="scrolling-wrapper">
     <div class="scrolling-content" #scrollingContent>
       <div *ngFor="let company of companies" class="company-card">
-        <img [src]="company.imageSrc" alt="Company Logo" class="company-image">
+        <img [src]="company.imageSrc" loading="lazy" alt="Company Logo" class="company-image">
         <p class="company-title">{{ company.title }}</p>
       </div>
       <!-- Duplicate the companies for seamless effect -->
       <div *ngFor="let company of companies" class="company-card">
-        <img [src]="company.imageSrc" alt="Company Logo" class="company-image">
+        <img [src]="company.imageSrc" loading="lazy" alt="Company Logo" class="company-image">
         <p class="company-title">{{ company.title }}</p>
       </div>
     </div>

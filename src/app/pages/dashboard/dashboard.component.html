@@ -40,13 +40,29 @@
   </div>
 
   </div>
+
+  <div *ngIf="isAdmin">
+    <h1 style="color: #ff7516;">Admin Dashboard</h1>
+    <h3>All Trainer: {{ totalTrainers }}</h3>
+    <h3>All Courses: {{ totalCourses }}</h3>
+    <h3>All Workshops: {{ totalWorkshops }}</h3>
+
+  <div *ngIf = "showPieChart">
+    <app-admin-pie-chart 
+      [totalTrainers]="totalTrainers" 
+      [totalCourses]="totalCourses" 
+      [totalWorkshops]="totalWorkshops">
+    </app-admin-pie-chart>
+  </div>
+  
+  </div>
   
   <div class="user-info">
     <h2><strong>Your Information</strong></h2>
     <p><strong>Name:</strong> {{ user?.name }}</p>
     <p><strong>Email:</strong> {{ user?.email }}</p>
     <p><strong>Role:</strong> {{ user?.role }}</p>
-    <button class="btn delete orangeButton" (click)="openDeleteDialog('Are you sure you want to delete your account permenently?')">Delete My Account</button>
+    <button *ngIf="!isAdmin" class="btn delete orangeButton" (click)="openDeleteDialog('Are you sure you want to delete your account permenently?')">Delete My Account</button>
   </div>
 </div>
 <app-footer></app-footer>

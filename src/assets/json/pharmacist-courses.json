@@ -45,15 +45,6 @@
     "rating": 5
   },
   {
-    "title": "Pharmacy Importance",
-    "description": "Best practices for effective medication therapy management.",
-    "trainerName": "testing",
-    "courseIntroduction": "The course emphasizes the critical role pharmacists play in healthcare. It highlights their responsibility in medication dispensing, clinical services, and public health promotion.",
-    "courseKeyConcepts": "Medication Dispensing: Ensuring the safe and accurate provision of medications; Clinical Services: Providing services like counseling, medication therapy management, and health screenings; Public Health: Promoting community health initiatives and preventing disease through pharmacy practice.",
-    "courseConclusion": "Pharmacists are integral to the healthcare system, ensuring that medications are used safely and effectively, and contributing to the overall health of communities.",
-    "rating": 2
-  },
-  {
     "title": "Patient Counseling Techniques",
     "description": "Strategies for effective patient counseling and communication.",
     "trainerName": "testing",

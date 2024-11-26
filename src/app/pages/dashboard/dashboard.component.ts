@@ -11,6 +11,7 @@ import { DeleteCoursesDialogComponent } from 'src/app/components/delete-courses-
 import { MatDialog } from '@angular/material/dialog';
 import { DeleteConfirmationComponent } from 'src/app/components/delete-confirmation/delete-confirmation.component';
 import { CustomDialogComponent } from 'src/app/components/custom-dialog/custom-dialog.component';
+import { CountService } from 'src/app/services/count.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -24,9 +25,21 @@ export class DashboardComponent implements OnInit {
   isCreatingCourse: any;
   viewAllCourse: boolean = false;
   createdCoursesEmpty: boolean = false;
+  isAdmin: boolean = false;
 
-  constructor(private readonly router: Router, 
+  //for admins dashboard
+  totalTrainers: number = 0;
+  totalCourses: number = 0;
+  totalWorkshops: number = 0;
+  loadingCourse: boolean = true; 
+  loadingWorkshop: boolean = true;
+  loadingTrainer: boolean = true;
+  showPieChart: boolean = false;
+
+  constructor(
+    private readonly router: Router, 
     public dialog: MatDialog,
+    private readonly countService: CountService,
     private readonly dataService: DataService, 
     private readonly store: Store<AuthState>) {}
 
@@ -38,14 +51,54 @@ export class DashboardComponent implements OnInit {
     
     this.store.select(selectUser).subscribe(user => { 
       this.user = user;
+      if(user.role == 'Administrator'){
+        this.isAdmin = true;
+      }
       console.log(user);
       if(user.createdCourses.length === 0){
         this.createdCoursesEmpty = true;
       }
     });
 
+    //for administration
+    this.countService.getTrainerCount().subscribe({
+      next: (trainerCount) => {
+        this.totalTrainers = trainerCount;  
+        this.loadingCourse = false; 
+        this.pieChart(); 
+      },
+      error: (err) => {
+        console.error('Error loading course count:', err);
+        this.loadingCourse = false; 
+      },
+    });
 
+    this.countService.getWorkshopCount().subscribe({
+      next: (workshopCount) => {
+        this.totalWorkshops = workshopCount;  
+        this.loadingWorkshop = false; 
+      },
+      error: (err) => {
+        console.error('Error loading course count:', err);
+        this.loadingWorkshop = false; 
+      },
+    });
 
+    this.countService.getCourseCount().subscribe({
+      next: (courseCount) => {
+        this.totalCourses = courseCount;  
+        this.loadingCourse = false;  
+      },
+      error: (err) => {
+        console.error('Error loading course count:', err);
+        this.loadingCourse = false; 
+      },
+    });
+
+  }
+
+  pieChart() {
+    this.showPieChart = true;
   }
 
   viewAllCoursesToggle(): void { 
@@ -112,4 +165,5 @@ export class DashboardComponent implements OnInit {
         console.log('The dialog was closed'); 
       }); 
     }
+
 }

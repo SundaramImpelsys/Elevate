@@ -50,6 +50,7 @@ import { CoursePageComponent } from './pages/course-page/course-page.component';
 import { DeleteConfirmationComponent } from './components/delete-confirmation/delete-confirmation.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { CustomDialogComponent } from './components/custom-dialog/custom-dialog.component';
+import { AdminPieChartComponent } from './admin-pie-chart/admin-pie-chart.component';
 
 
 @NgModule({
@@ -92,6 +93,7 @@ import { CustomDialogComponent } from './components/custom-dialog/custom-dialog.
     DeleteConfirmationComponent,
     PageNotFoundComponent,
     CustomDialogComponent,
+    AdminPieChartComponent,
   ],
   imports: [ 
     BrowserModule,
