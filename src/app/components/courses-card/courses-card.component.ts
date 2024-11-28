@@ -41,6 +41,7 @@ export class CoursesCardComponent {
   }
 
   sendData() {
+    console.log(this.user);
     if (this.user && this.user.role === 'learner') {
       const userClone = { ...this.user, enrolledCourses: [...this.user.enrolledCourses] };
       if (userClone.enrolledCourses.includes(this.title)) {

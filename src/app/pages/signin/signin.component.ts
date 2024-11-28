@@ -6,6 +6,7 @@ import { UserData } from 'src/app/interfaces/user.data';
 import { Store } from '@ngrx/store';
 import { login } from '../../store/actions/userVerification.actions';
 import { AuthState } from '../../store/reducers/userVerification.reducers';
+import { selectUser } from 'src/app/store/selectors/userVerification.selectors';
 
 @Component({
   selector: 'app-signin',
@@ -83,6 +84,9 @@ export class SigninComponent {
 
         this.dataService.addItem(this.registrationData).subscribe(response => {
           console.log('Registration Data added:', response);
+          this.store.select(selectUser).subscribe(user => { 
+            console.log(user);
+          });
          });
       } 
     } 

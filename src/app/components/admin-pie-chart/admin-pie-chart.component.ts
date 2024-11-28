@@ -14,7 +14,7 @@ export class AdminPieChartComponent implements OnInit {
   @Input() totalCourses: number = 0;
   @Input() totalWorkshops: number = 0;
 
-  constructor(private el: ElementRef) {}
+  constructor(private readonly el: ElementRef) {}
 
   ngOnInit(): void {
     this.initializeChart();

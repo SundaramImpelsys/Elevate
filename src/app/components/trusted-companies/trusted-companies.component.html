@@ -6,7 +6,7 @@
         <img [src]="company.imageSrc" loading="lazy" alt="Company Logo" class="company-image">
         <p class="company-title">{{ company.title }}</p>
       </div>
-      <!-- Duplicate the companies for seamless effect -->
+      <!-- Duplicate the companies for seamless effect of moving annimation-->
       <div *ngFor="let company of companies" class="company-card">
         <img [src]="company.imageSrc" loading="lazy" alt="Company Logo" class="company-image">
         <p class="company-title">{{ company.title }}</p>
